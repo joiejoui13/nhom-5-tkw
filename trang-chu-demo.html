@@ -109,25 +109,70 @@
      </div>
    </section>
  
-   <!-- Danh Mục Sản Phẩm -->
-   <section id="danh-muc" class="py-16 px-6 text-center">
-     <h2 class="text-3xl font-bold mb-10 fade-in-up">Danh Mục Sản Phẩm</h2>
-     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-       <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
-         <p>Kính Cận</p>
-       </div>
-       <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
-         <p>Kính Râm</p>
-       </div>
-       <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
-         <p>Kính Trẻ Em</p>
-       </div>
-       <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
-         <p>Phụ Kiện</p>
-       </div>
-     </div>
-   </section>
- 
+<!-- Danh Mục Sản Phẩm -->
+<section id="danh-muc" class="py-16 px-6 text-center bg-gray-100">
+    <h2 class="text-3xl font-bold mb-10 fade-in-up">Danh Mục Sản Phẩm</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+  
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/kinh-3.jpeg" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4">
+          <p class="font-semibold text-gray-800">Gọng kính</p>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/trong-kinh.jpeg" alt="Tròng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4">
+          <p class="font-semibold text-gray-800">Tròng kính</p>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/kinh-ram-1.webp" alt="Kính râm" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4">
+          <p class="font-semibold text-gray-800">Kính râm</p>
+        </div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/kinh-ram-tre-em.png" alt="Kính râm trẻ em" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4">
+          <p class="font-semibold text-gray-800">Kính râm trẻ em</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Hover effect -->
+  <script>
+    $(document).ready(function() {
+      $('.danh-muc-img').hover(
+        function() {
+          $(this).css({
+            'transform': 'scale(1.1)',
+            'transition': 'transform 0.5s ease'
+          });
+        },
+        function() {
+          $(this).css({
+            'transform': 'scale(1)',
+            'transition': 'transform 0.5s ease'
+          });
+        }
+      );
+    });
+  </script>
+  
+  
    <!-- Sản Phẩm Nổi Bật -->
    <section id="san-pham" class="py-16 px-6">
      <h2 class="text-3xl font-bold mb-10 text-center fade-in-up">Sản Phẩm Nổi Bật</h2>
