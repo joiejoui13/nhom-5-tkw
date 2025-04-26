@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kính Mắt Cao Cấp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Segoe UI"', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      overflow: hidden;
+    }
+    .grid-bg {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+    .fade-in-delay {
+      animation-delay: 0.6s;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="relative h-screen grid-bg">
+
+  <!-- Vòng sáng động lớn ở nền -->
+  <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-purple-500 opacity-25 rounded-full blur-[120px] animate-pulse transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+
+  <!-- Hero section -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-10">
+
+    <!-- Logo -->
+    <img src="Ảnh/logo.png" alt="Logo Kính Mắt" class="w-32 h-auto mb-6 fade-in-up" />
+
+    <!-- Tiêu đề -->
+    <h1 class="text-4xl md:text-6xl font-bold fade-in-up">
+      Kính Mắt OPTIC CARE
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mt-4 fade-in-up fade-in-delay">
+      Khám phá bộ sưu tập kính mắt thời thượng với thiết kế tinh tế và chất lượng hàng đầu.
+    </p>
+
+    <!-- Nút Xem Sản Phẩm -->
+    <a href="Trang_chu.html" class="mt-8 inline-block bg-white text-black px-6 py-3 text-lg font-semibold rounded-full hover:bg-gray-200 transition fade-in-up fade-in-delay" style="animation-delay: 1s;">
+      Xem Sản Phẩm
+    </a>
+  </div>
+
+</body>
+</html>
