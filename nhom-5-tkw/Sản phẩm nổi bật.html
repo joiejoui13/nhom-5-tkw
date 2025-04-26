@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang Chủ | Kính Mắt OPTIC CARE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Segoe UI"', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    .grid-bg {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+    .fade-in-delay {
+      animation-delay: 0.6s;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen grid-bg">
+
+  <!-- Vòng sáng nền -->
+  <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-purple-500 opacity-25 rounded-full blur-[120px] animate-pulse transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+
+  <!-- Header -->
+  <header class="w-full flex justify-between items-center p-4 z-10 relative">
+    <img src="Ảnh/logo.png" alt="Logo" class="h-12">
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-purple-400 transition">Trang Chủ</a>
+      <a href="#" class="hover:text-purple-400 transition">Sản Phẩm</a>
+      <a href="#" class="hover:text-purple-400 transition">Giới Thiệu</a>
+      <a href="#" class="hover:text-purple-400 transition">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="relative flex items-center justify-center h-[80vh] text-center">
+    <div class="fade-in-up">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">Khám Phá Thời Trang Kính Mắt</h1>
+      <p class="text-lg md:text-2xl text-gray-300">Chất lượng hàng đầu - Thiết kế đẳng cấp</p>
+      <a href="#san-pham" class="mt-8 inline-block bg-white text-black px-6 py-3 text-lg font-semibold rounded-full hover:bg-gray-200 transition">Xem Sản Phẩm</a>
+    </div>
+  </section>
+
+  <!-- Danh Mục Sản Phẩm -->
+  <section id="danh-muc" class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10 fade-in-up">Danh Mục Sản Phẩm</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
+        <p>Kính Cận</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
+        <p>Kính Râm</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
+        <p>Kính Trẻ Em</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 hover:bg-purple-500 transition fade-in-up">
+        <p>Phụ Kiện</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sản Phẩm Nổi Bật -->
+<section id="san-pham" class="py-16 px-6">
+  <h2 class="text-3xl font-bold mb-10 text-center fade-in-up">Sản Phẩm Nổi Bật</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-gray-800 rounded-lg p-4 fade-in-up">
+      <img src="c:\Users\MY PC\Downloads\gucci-gg2215s-ll4-jj-2.png" alt="Kính Gucci" class="rounded mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold">Kính Gucci</h3>
+      <p class="text-gray-400 mt-2">Thiết kế thời trang, sang trọng.</p>
+      <p class="text-purple-400 font-bold mt-2">Giá: 7.200.000₫</p>
+      <button class="mt-4 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Mua Ngay</button>
+
+    </div>
+    <div class="bg-gray-800 rounded-lg p-4 fade-in-up">
+      <img src="c:\Users\MY PC\Downloads\rayban-sfu246-col0300.png" alt="Kính Rayban" class="rounded mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold">Kính Rayban</h3>
+      <p class="text-gray-400 mt-2">Phong cách trẻ trung, năng động.</p>
+      <p class="text-purple-400 font-bold mt-2">Giá: 2.750.000₫</p>
+      <button class="mt-4 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Mua Ngay</button>
+
+    </div>
+    <div class="bg-gray-800 rounded-lg p-4 fade-in-up">
+      <img src="c:\Users\MY PC\Downloads\gongTitan-l2204-c1-2.png" alt="Gọng Titan" class="rounded mb-4 w-full h-40 object-cover">
+      <h3 class="text-xl font-semibold">Gọng Titan</h3>
+      <p class="text-gray-400 mt-2">Siêu nhẹ, độ bền cao.</p>
+      <p class="text-purple-400 font-bold mt-2">Giá: 1.850.000₫</p>
+      <button class="mt-4 bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded">Mua Ngay</button>
+
+    </div>
+  </div>
+</section>
+
+   <!-- Giới Thiệu -->
+   <section id="gioi-thieu" class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6 fade-in-up">Về Chúng Tôi</h2>
+    <p class="text-gray-400 max-w-2xl mx-auto fade-in-up fade-in-delay">
+      Kính Mắt OPTIC CARE tự hào mang đến những sản phẩm kính chất lượng cao, đáp ứng nhu cầu thời trang và bảo vệ sức khỏe đôi mắt của bạn.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm">
+    © 2025 OPTIC CARE. All rights reserved.
+  </footer>
+
+</body>
+</html>
