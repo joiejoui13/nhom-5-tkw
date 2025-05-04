@@ -1,0 +1,162 @@
+
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .grid-bg {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+  }
+  
+  .fade-in-delay {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  .footer {
+    background-color: rgba(255, 255, 255, 0.08);
+    ;
+    color: rgb(155, 189, 201);
+    font-family: 'Roboto', sans-serif;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+  }
+  .logo {
+    height: 320px;
+    width: auto;
+  }
+  
+  .certificates img {
+    height: 60px; /* cho to hơn, trước nhỏ quá */
+    width: auto;
+    margin-top: 10px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .footer-column {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-left {
+    flex: 1 1 300px;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  .subscribe {
+    display: flex;
+    margin: 15px 0 20px;
+  }
+  
+  .subscribe input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .subscribe button {
+    background: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subscribe button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .product-list li {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  
+  .certificates img {
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 13px;
+  }
+  
