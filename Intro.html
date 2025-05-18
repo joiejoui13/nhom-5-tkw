@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ | Kính Mắt OPTIC CARE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="relative h-screen grid-bg overflow-hidden">
+
+    <!-- Vòng sáng động lớn ở nền -->
+    <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-purple-500 opacity-25 rounded-full blur-[120px] animate-pulse transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+  
+    <!-- Hero Container: chứa logo + text, để di chuyển cùng nhau -->
+    <div id="hero" class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 transition-transform duration-1000 ease-in-out">
+  
+      <!-- Logo -->
+      <img
+        src="picture/logo.png"
+        alt="Logo"
+        id="logo"
+        class="w-[300px] h-auto mb-6 transition-transform duration-1000 ease-in-out"
+      />
+  
+      <!-- Nội dung -->
+      <div id="text-content" class="opacity-0 pointer-events-none">
+        <h1 id="title" class="text-4xl md:text-6xl font-bold opacity-0 translate-y-5 transition duration-700">Kính Mắt OPTIC CARE</h1>
+        <p id="desc" class="text-lg md:text-xl text-gray-300 max-w-2xl mt-4 opacity-0 translate-y-5 transition duration-700 delay-300">
+          Khám phá bộ sưu tập kính mắt thời thượng với thiết kế tinh tế và chất lượng hàng đầu.
+        </p>
+        <a
+          id="button"
+          href="Trang_chu.html"
+          class="mt-8 inline-block bg-white text-black px-6 py-3 text-lg font-semibold rounded-full hover:bg-gray-200 transition opacity-0 translate-y-5 duration-700 delay-500"
+        >
+          Xem Sản Phẩm
+        </a>
+      </div>
+    </div>
+  
+    <script>
+      const logo = document.getElementById("logo");
+      const hero = document.getElementById("hero");
+      const textContent = document.getElementById("text-content");
+      const title = document.getElementById("title");
+      const desc = document.getElementById("desc");
+      const button = document.getElementById("button");
+  
+      // Logo đập
+      logo.animate(
+        [
+          { transform: "scale(1)" },
+          { transform: "scale(1.2)" },
+          { transform: "scale(1)" }
+        ],
+        {
+          duration: 2000,
+          iterations: 2
+        }
+      );
+  
+      // Sau 4s: thu nhỏ logo, di chuyển cả khối hero lên
+      setTimeout(() => {
+        logo.style.transform = "scale(0.4)";
+        hero.style.transform = "translateY(-120px)";
+  
+        setTimeout(() => {
+          textContent.classList.remove("opacity-0", "pointer-events-none");
+          title.classList.remove("opacity-0", "translate-y-5");
+          desc.classList.remove("opacity-0", "translate-y-5");
+          button.classList.remove("opacity-0", "translate-y-5");
+        }, 800);
+      }, 4000);
+    </script>
+  </body>
+    
+  
+</html>
