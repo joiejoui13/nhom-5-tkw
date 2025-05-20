@@ -1,11 +1,23 @@
 /* ==== GLOBAL STYLES ==== */
 body {
-  background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+  background-color: #c0f7f3;
   color: #222222; 
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.banner-body {
+  min-height: 100vh;
+  background-image: url('picture/anh-banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .grid-bg {
@@ -135,6 +147,13 @@ body {
     opacity: 1;
   }
 }
+
+/* ==== TOP INFO BAR ==== */
+.custom-top-info-bar {
+  background-color: #19c8c2;
+  /* Bạn có thể thêm các thuộc tính CSS khác cho top info bar ở đây nếu muốn */
+}
+
 
 /* ==== FOOTER ==== */
 .footer {
