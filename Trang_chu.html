@@ -8,66 +8,83 @@
     <link rel="stylesheet" href="style.css" />
   </head>
  <body class="relative min-h-screen grid-bg">
- 
-   <!-- Vòng sáng nền -->
-   <div class="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-purple-500 opacity-25 rounded-full blur-[120px] animate-pulse transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
-   
-   <header class="w-full flex justify-center p-4 z-10 relative">
-    <div class="w-full max-w-7xl bg-[#2c2c2c] rounded-full px-6 py-3 flex justify-between items-center shadow-lg">
-      
-      <!-- Logo -->
-      <div class="flex items-center space-x-2">
-        <img src="picture/logo.png" alt="Logo" class="h-10 w-auto">
-      </div>
-  
-      <!-- Navigation + Search + Cart -->
-      <div class="flex items-center space-x-6">
-        
-        <!-- Menu -->
-        <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-white font-semibold no-underline transition-colors duration-300 hover:text-purple-400">Trang Chủ</a>
-            <a href="#" class="text-white font-semibold no-underline transition-colors duration-300 hover:text-purple-400">Sản Phẩm</a>
-            <a href="#" class="text-white font-semibold no-underline transition-colors duration-300 hover:text-purple-400">Giới Thiệu</a>
-            <a href="#" class="text-white font-semibold no-underline transition-colors duration-300 hover:text-purple-400">Liên Hệ</a>
-        </nav>
-  
-        <!-- Thanh tìm kiếm -->
-        <div class="relative w-56 md:w-72 hidden md:block">
-          <input 
-            type="text" 
-            placeholder="Các mẫu kính râm hot nhất..." 
-            class="w-full py-2 pl-4 pr-10 rounded-full bg-white bg-opacity-90 placeholder-gray-400 italic text-black focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
-          >
-          <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z" />
-            </svg>
-          </div>
-        </div>
-  
-        <!-- Giỏ hàng -->
-        <div class="relative flex items-center group">
-          <button class="text-white font-semibold flex items-center space-x-1 transition-all duration-300 group-hover:translate-x-1 group-hover:text-purple-400">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13m-2-5l-1 5m-4-5v5" />
-            </svg>
-            <span>Giỏ Hàng</span>
-          </button>
-        </div>
-  
-      </div>
-  
+
+<!-- Top Info Bar -->
+<div class="fixed top-0 left-0 right-0 z-30 bg-[#19c8c2] text-white text-sm py-2 px-6 flex justify-end items-center space-x-4 shadow-md">
+  <a href="#" class="hover:text-purple-400 transition">Chính sách</a>
+  <a href="#" class="hover:text-purple-400 transition">Tra cứu đơn hàng</a>
+  <a href="login.html" class="flex items-center space-x-1 hover:text-purple-400 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+    <span>Tài Khoản</span>
+  </a>
+</div>
+
+<!-- Nền ánh sáng -->
+<div class="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-purple-500 opacity-20 rounded-full blur-[100px] animate-pulse transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+
+<!-- Header -->
+<header class="w-full flex justify-center pt-20 pb-4 px-4 relative z-10">
+  <div class="w-full max-w-7xl bg-neutral-900/70 backdrop-blur-md rounded-2xl px-6 py-3 flex justify-between items-center shadow-xl">
+    
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="picture/logo-trang.png" alt="Logo" class="h-10 w-auto">
     </div>
-  </header>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <a href="#" class="text-white font-medium hover:text-purple-400 transition">Sản Phẩm</a>
+      <a href="#" class="text-white font-medium flex items-center hover:text-purple-400 transition space-x-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>Tìm Cửa Hàng</span>
+      </a>
+      <a href="#" class="text-white font-medium hover:text-purple-400 transition">Xem Thêm</a>
+    </nav>
+
+    <!-- Search bar -->
+    <div class="relative w-40 md:w-64">
+      <input 
+        type="text" 
+        placeholder="Các mẫu kính râm hot nhất..." 
+        class="w-full py-2 pl-4 pr-10 rounded-full bg-white bg-opacity-90 text-sm text-black placeholder-gray-400 italic focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+      >
+      <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="flex items-center space-x-2 ml-4">
+      <button class="text-white font-medium flex items-center space-x-1 hover:text-purple-400 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13m-2-5l-1 5m-4-5v5" />
+        </svg>
+        <span>Giỏ Hàng</span>
+      </button>
+    </div>
+  </div>
+</header>
   
- 
-   <!-- Banner -->
-   <section class="relative flex items-center justify-center h-[80vh] text-center">
-     <div class="fade-in-up">
-       <h1 class="text-5xl md:text-7xl font-bold mb-6">Khám Phá Thời Trang Kính Mắt</h1>
-       <p class="text-lg md:text-2xl text-300">Chất lượng hàng đầu - Thiết kế đẳng cấp</p>
-     </div>
-   </section>
+
+    <!-- Banner -->
+  <section class="relative flex items-center justify-center h-screen text-center overflow-hidden">
+  <!-- Ảnh nền bên trong section -->
+  <img 
+    src="picture/banner-bg.webp" 
+    alt="Banner Kính Mắt Optic Care" 
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+
+
+</section>
+
  
 <!-- Danh Mục Sản Phẩm -->
 <section id="danh-muc" class="py-16 px-6 text-center bg-gray-100">
