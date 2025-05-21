@@ -1,0 +1,46 @@
+<!-- product-detail.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết sản phẩm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-4xl mx-auto p-6 bg-white mt-10 rounded-xl shadow-lg">
+    <a href="Trang_chu.html" class="text-blue-600 underline mb-4 inline-block">← Quay lại trang trước</a>
+
+    <!-- FLEX CHIA 2 PHẦN -->
+    <div class="flex flex-col md:flex-row gap-6 items-start">
+      <!-- Ảnh bên trái -->
+      <div class="md:w-1/3 w-full">
+        <img src="picture\kinh-ap-trong1.jpeg" alt="Tròng kính" class="rounded-xl w-full mb-4">
+
+    </div>
+
+      <!-- Thông tin bên phải -->
+      <div class="md:w-2/3 w-full">
+        <h1 id="productTitle" class="text-2xl font-bold mb-2">Tên sản phẩm</h1>
+        <p id="productPrice" class="text-cyan-500 text-xl font-semibold mb-4">Giá sản phẩm</p>
+        <p id="productDescription" class="text-gray-700 text-base leading-relaxed">
+          Mô tả sản phẩm...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript xử lý dữ liệu từ URL -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get("title");
+    const price = params.get("price");
+    const img = params.get("img");
+    const desc = params.get("desc");
+
+    document.getElementById("productTitle").textContent = title || "Tên sản phẩm";
+    document.getElementById("productPrice").textContent = price || "Chưa có giá";
+    document.getElementById("productImage").src = img || "picture\kinh-ap-trong1.jpeg" ;
+    document.getElementById("productDescription").textContent = desc || "Mô tả chưa cập nhật.";
+  </script>
+</body>
+</html>
