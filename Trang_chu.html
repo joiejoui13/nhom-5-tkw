@@ -10,13 +10,24 @@
       body {
         font-family: Arial, sans-serif;
       }
+      /* CSS để ẩn thanh cuộn */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      .best-seller-card { 
+        min-width: 20rem; /* tương đương w-80, có thể điều chỉnh */
+      }
     </style>
   </head>
  <body class="relative min-h-screen grid-bg">
 
 <!-- Top Info Bar -->
 <div class="fixed top-0 left-0 right-0 z-30 bg-[#19c8c2] text-white text-sm py-2 px-6 flex justify-end items-center space-x-4 shadow-md">
-  <a href="#" class="hover:text-purple-400 transition">Chính sách</a>
+  <a href="chinh_sach.html" class="hover:text-purple-400 transition">Chính sách</a>
   <a href="#" class="hover:text-purple-400 transition">Tra cứu đơn hàng</a>
   <a href="login.html" class="flex items-center space-x-1 hover:text-purple-400 transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -183,53 +194,77 @@
 </section>
 
  
-<!-- Danh Mục Sản Phẩm -->
-<section id="danh-muc" class="py-16 px-6 text-center bg-gray-100">
-    <h2 class="text-3xl font-bold mb-10 fade-in-up">Danh Mục Sản Phẩm</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-  
-      <!-- Card 1 -->
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+<!-- BÁN CHẠY NHẤT-->
+<section id="danh-muc" class="py-16 px-6 bg-gray-100">
+  <h2 class="text-3xl font-bold mb-10 text-center fade-in-up">BÁN CHẠY NHẤT</h2>
+  <div class="relative">
+    <!-- Scrollable container for cards -->
+    <div id="best-sellers-container" class="flex overflow-x-auto pb-4 space-x-8 scrollbar-hide">
+      <!-- Card 1 --> 
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
         <img src="picture/kinh-3.jpeg" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-        <div class="pt-4">
-          <p class="font-semibold text-gray-800">Gọng kính</p>
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA NA221393 (50.18.145)</p>
         </div>
       </div>
-  
       <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-        <img src="picture/trong-kinh.jpeg" alt="Tròng kính" class="w-full h-48 object-contain danh-muc-img">
-        <div class="pt-4">
-          <p class="font-semibold text-gray-800">Tròng kính</p>
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/trong-kinh.jpeg" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA KHOAN NA2341393 (52.22.144)</p>
         </div>
       </div>
-  
       <!-- Card 3 -->
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-        <img src="picture/kinh-ram-1.webp" alt="Kính râm" class="w-full h-48 object-contain danh-muc-img">
-        <div class="pt-4">
-          <p class="font-semibold text-gray-800">Kính râm</p>
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/kinh-ram-1.webp" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA NA301393 (44.18.145)</p>
         </div>
       </div>
-  
       <!-- Card 4 -->
-      <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-        <img src="picture/kinh-ram-tre-em.png" alt="Kính râm trẻ em" class="w-full h-48 object-contain danh-muc-img">
-        <div class="pt-4">
-          <p class="font-semibold text-gray-800">Kính râm trẻ em</p>
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="#" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CÀNG KIM LOẠI NA219397 (54.18.256)</p>
         </div>
       </div>
-  
-    </div>
+      <!-- Card 5 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="#" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CỐT KIM LOẠI FE221393 (51.18.136)</p>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="#" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CỨNG NA03006 (52.18.147)</p>
+        </div>
+      </div>
+
+    <!-- Navigation Buttons --> 
+    <button id="scroll-left" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg z-20 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="scroll-right" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg z-20 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
   </section>
-  
+
+
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <!-- Hover effect -->
   <script>
     $(document).ready(function() {
-      $('.danh-muc-img').hover(
+      $('#best-sellers-container .danh-muc-img').hover( // Cập nhật selector nếu cần, nhưng .danh-muc-img vẫn dùng được
         function() {
           $(this).css({
             'transform': 'scale(1.1)',
@@ -480,7 +515,73 @@
         <p>Optic Care © 2018 - 2023. Design by Trần Như Yến Ngọc Việt Nam</p>
     </div>
 </footer>
-  
- 
+
+<!-- JavaScript cho Carousel Bán Chạy Nhất -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('best-sellers-container');
+    const scrollLeftBtn = document.getElementById('scroll-left');
+    const scrollRightBtn = document.getElementById('scroll-right');
+    let autoScrollInterval;
+
+    if (!container || !scrollLeftBtn || !scrollRightBtn) {
+        console.warn('Best sellers carousel elements not found.');
+        return;
+    }
+
+    // Tạo bản sao của các card để tạo hiệu ứng lặp
+    const duplicateContent = container.innerHTML;
+    container.innerHTML += duplicateContent;
+
+    container.scrollLeft = 0; // Đảm bảo bắt đầu từ vị trí đầu tiên
+
+    const firstCard = container.querySelector('.best-seller-card');
+    if (!firstCard) return; 
+
+    const cardVisibleWidth = firstCard.offsetWidth; 
+    const gap = 32; // Từ class space-x-8 (2rem = 32px)
+    const scrollStep = cardVisibleWidth + gap;
+
+    scrollLeftBtn.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        resetAutoScroll(); 
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+        container.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        resetAutoScroll(); 
+    });
+
+    function autoScroll() {
+        const currentScroll = container.scrollLeft;
+        const maxScroll = container.scrollWidth / 2; // Chia đôi vì đã thêm bản sao
+
+        if (currentScroll >= maxScroll - container.clientWidth) {
+            // Cuộn về vị trí bắt đầu của bản sao đầu tiên
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        }
+    }
+
+    function startAutoScroll() { 
+      stopAutoScroll();
+      autoScrollInterval = setInterval(autoScroll, 4000); 
+    }
+
+    function stopAutoScroll() { 
+      clearInterval(autoScrollInterval);
+    }
+
+    function resetAutoScroll() { 
+      stopAutoScroll();
+      startAutoScroll();
+    }
+
+    startAutoScroll();
+    container.addEventListener('mouseenter', stopAutoScroll); // Dừng khi hover
+    container.addEventListener('mouseleave', startAutoScroll); // Tiếp tục khi rời chuột
+});
+</script>
  </body>
  </html>
