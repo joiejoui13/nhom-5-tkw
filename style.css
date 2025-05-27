@@ -1,31 +1,4 @@
-/* ==== GLOBAL STYLES ==== */
-body {
-  background-color: #c0f7f3;
-  color: #222222; 
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.banner-body {
-  min-height: 100vh;
-  background-image: url('picture/anh-banner.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-.grid-bg {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center;
-  position: relative;
-}
 
 /* ==== INTRO SECTION ==== */
 #intro {
@@ -115,6 +88,269 @@ html, body {
   background-color: #3730a3;
 }
 
+
+/* ======= Header ======= */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1280px;
+  background-color: rgba(23, 23, 23, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.logo-img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #c084fc;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  color: #c084fc;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.rotate-on-hover {
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .rotate-on-hover {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 0.75rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  z-index: 50;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dropdown-menu.wide {
+  left: 0;
+  width: 100vw;
+  max-width: 1280px;
+}
+
+.dropdown-menu.narrow {
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  width: 360px;
+}
+
+.dropdown-content {
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.dropdown-content.full {
+  flex-direction: column;
+  background-color: #14b8a6;
+  color: white;
+  padding: 1.5rem 1rem;
+  gap: 0.5rem;
+}
+
+.dropdown-content.full a:hover {
+  background-color: #0d9488;
+}
+
+.dropdown-left {
+  width: 33.333%;
+  background-color: #14b8a6;
+  color: white;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dropdown-left a:hover {
+  background-color: #0d9488;
+}
+
+.dropdown-right {
+  width: 66.666%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-right img {
+  width: 20rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.triangle {
+  display: flex;
+  justify-content: center;
+  height: 0;
+}
+
+.triangle-left {
+  padding-left: 2.5rem;
+  justify-content: start;
+}
+
+.triangle-center {
+  margin-bottom: -0.5rem;
+}
+
+.triangle div {
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid white;
+}
+
+.search {
+  position: relative;
+  width: 10rem;
+}
+
+@media (min-width: 768px) {
+  .search {
+    width: 16rem;
+  }
+}
+
+.search input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: rgba(255,255,255,0.9);
+  font-size: 0.875rem;
+  color: black;
+  font-style: italic;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+  color: #9ca3af;
+}
+
+.search input:focus {
+  outline: 2px solid #c084fc;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+}
+
+.cart button {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.cart button:hover {
+  color: #c084fc;
+}
+
+
+
+/* ==== BODY ==== */
+body {
+  background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+  color: #222222; 
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+
+      /* CSS để ẩn thanh cuộn */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      .best-seller-card { 
+        min-width: 20rem; /* tương đương w-80, có thể điều chỉnh */
+}
+}
+.grid-bg {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  position: relative;
+}
 /* ==== ANIMATIONS ==== */
 @keyframes fadeUp {
   to {
@@ -147,13 +383,6 @@ html, body {
     opacity: 1;
   }
 }
-
-/* ==== TOP INFO BAR ==== */
-.custom-top-info-bar {
-  background-color: #19c8c2;
-  /* Bạn có thể thêm các thuộc tính CSS khác cho top info bar ở đây nếu muốn */
-}
-
 
 /* ==== FOOTER ==== */
 .footer {
