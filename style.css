@@ -336,17 +336,19 @@
 
 
 /* ==== BODY ==== */
+
+    
 body {
-  background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+  background: #c0f7f3; /* Changed to the light teal from the previous step */
   color: #222222; 
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 
       /* CSS để ẩn thanh cuộn */
       .scrollbar-hide::-webkit-scrollbar {
-        display: none;
+        display: flex;
       }
       .scrollbar-hide {
         -ms-overflow-style: none;  /* IE and Edge */
@@ -638,3 +640,522 @@ body {
   font-size: 13px;
   color: #555555;
 }
+/* Phần CSS cho sidebar và nội dung chính của filter.html được giữ nguyên từ đây */
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 16px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        .filter-group {
+            margin-bottom: 25px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .filter-item input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: #3498db;
+        }
+
+        .filter-item label {
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Color filter styles */
+        .color-filter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .color-filter-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .color-filter-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .color-circle.glossy {
+            background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+        }
+
+        .color-filter-item input[type="checkbox"]:checked + .color-circle {
+            border-color: #19c8c2;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(25, 200, 194, 0.5);
+        }
+
+        .color-filter-item input[type="checkbox"]:checked + .color-circle::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .sort-select {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .brand-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #34495e;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glasses-icon {
+            font-size: 60px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .out-of-stock-badge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(52, 73, 94, 0.9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .product-info {
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .product-code {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #ecf0f1;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .color-dot:hover {
+            transform: scale(1.1);
+        }
+
+        .color-dot.black { background-color: #2c3e50; }
+        .color-dot.blue { background-color: #3498db; }
+        .color-dot.gray { background-color: #95a5a6; }
+        .color-dot.brown { background-color: #d35400; }
+        .color-dot.pink { background-color: #e91e63; }
+        .color-dot.purple { background-color: #9b59b6; }
+        .color-dot.orange { background-color: #ff8800; }
+
+        .contact-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .contact-btn.available {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            color: white;
+        }
+
+        .contact-btn.available:hover {
+            background: linear-gradient(135deg, #16a085, #1abc9c);
+            transform: translateY(-2px);
+        }
+
+        .contact-btn.orange {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+        }
+
+        .contact-btn.orange:hover {
+            background: linear-gradient(135deg, #d35400, #e67e22);
+            transform: translateY(-2px);
+        }
+
+        .show-more-btn {
+            background: none;
+            border: none;
+            color: #19c8c2;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .show-more-btn:hover {
+            color: #16a085;
+        }
+
+        .results-count {
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                position: static;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+/* ==== FOOTER ==== */ /* Thêm toàn bộ khối footer từ style.css */
+.footer {
+  background-color: rgba(240, 244, 248, 0.9);
+  color: #222222;
+  font-family: 'Roboto', sans-serif;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #444444;
+}
+
+.footer-column li:hover {
+  text-decoration: underline;
+  color: #4f46e5;
+}
+
+.subscribe {
+  display: flex;
+  margin: 15px 0 20px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.subscribe button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  padding: 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe button img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.certificates img {
+  height: 50px;
+  width: auto;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #555555;
+}
+ .main-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      width: 90%;
+      max-width: 960px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      display: flex;
+      overflow: hidden;
+    }
+
+    .login-img {
+      flex: 1;
+      min-width: 50%;
+      display: block;
+    }
+
+    .login-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .login-form {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .form-label {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .form-control {
+      border: 1px solid #19c8c2;
+      border-radius: 6px;
+    }
+
+    .btn-login {
+      background-color: #19c8c2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .btn-google {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px;
+      background: white;
+    }
+
+    .btn-google img {
+      height: 20px;
+    }
+
+    .text-muted-small {
+      font-size: 14px;
+    }
+
+    a {
+      color: #19c8c2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+      }
+
+      .login-img {
+        display: none;
+      }
+    }
