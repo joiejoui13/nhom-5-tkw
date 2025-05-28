@@ -230,7 +230,7 @@
     });
   </script>
   
- <!-- Bộ siêu tập mới nhất -->
+<!-- Bộ siêu tập mới nhất -->
 <section id="san-pham" class="py-16 px-6">
     <h2 class="text-3xl font-bold mb-10 text-center text-teal-600">BỘ SƯU TẬP MỚI NHẤT</h2>
 
@@ -301,14 +301,16 @@
         </a>
         <h3 class="text-sm font-semibold text-gray-800 mb-1">GK.GỌNG KÍNH THỜI TRANG <br>TP-81014 (51.19.145)</br></h3>
         <div class="flex gap-2 mb-3">
-          <div class="w-4 h-4 rounded-full bg-white border"></div>
-          <div class="w-4 h-4 rounded-full bg-yellow-800 border"></div>
+          <div class="w-4 h-4 rounded-full bg-blue border"></div>
+          <div class="w-4 h-4 rounded-full bg-green-800 border"></div>
         </div>
         <div class="flex justify-between items-center">
           <span class="text-cyan-500 font-bold text-lg">450.000đ</span>
           <a href="#" class="bg-cyan-400 hover:bg-cyan-500 text-white px-4 py-1 rounded-full text-sm flex items-center gap-1">Mua ngay →</a>
         </div>
       </div>
+
+
       <!-- Tròng kính1 -->
       <div class="product trong bg-white rounded-2xl p-4 shadow-lg">
         <a 
@@ -365,6 +367,7 @@
           <a href="#" class="bg-cyan-400 hover:bg-cyan-500 text-white px-4 py-1 rounded-full text-sm flex items-center gap-1">Mua ngay →</a>
         </div>
       </div>
+
       <!-- Kính râm1 -->
       <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
         <a 
@@ -421,16 +424,67 @@
           <div class="w-4 h-4 rounded-full bg-pink-700 border"></div>
         </div>
         <div class="flex justify-between items-center">
-          <span class="text-cyan-500 font-bold text-lg">1690.000đ</span>
+          <span class="text-cyan-500 font-bold text-lg">1050.000đ</span>
           <a href="#" class="bg-cyan-400 hover:bg-cyan-500 text-white px-4 py-1 rounded-full text-sm flex items-center gap-1">Mua ngay →</a>
         </div>
       </div>
-    </div>
+          </div>
 
+<!-- Nút xem thêm -->
+  <div class="text-center mt-10 hidden" id="loadMoreGongWrapper">
+    <a href="Xem_them_gong.html">
+  <button class="w-full max-w-7xl mx-auto border-2 border-cyan-500 bg-white hover:bg-cyan-100 text-cyan-700 font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      XEM THÊM GỌNG KÍNH +
+      </button>
+    </a>
+  </div>
+
+   <div class="text-center mt-10 hidden" id="loadMoreTrongWrapper">
+    <a href="Xem_them_trong.html">
+  <button class="w-full max-w-7xl mx-auto border-2 border-cyan-500 bg-white hover:bg-cyan-100 text-cyan-700 font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      XEM THÊM TRÒNG KÍNH +
+      </button>
+    </a>
+  </div>
+
+  <div class="text-center mt-10 hidden" id="loadMoreRamWrapper">
+    <a href="xem_them_kinh_ram.html">
+  <button class="w-full max-w-7xl mx-auto border-2 border-cyan-500 bg-white hover:bg-cyan-100 text-cyan-700 font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      XEM THÊM KÍNH RÂM +
+      </button>
+    </a>
+  </div>
   </section>
+  <!--JS Hiển thị nút thêm sản phẩm-->
+ <script>
+    $(document).ready(function () {
+      // Mặc định hiện gọng kính
+      $(".product").hide();
+      $(".product.gong").slice(0, 4).show();
+      $("#loadMoreGongWrapper").show();
 
+      $(".category-link").on("click", function (e) {
+        e.preventDefault();
+        const category = $(this).data("category"); // gong, trong, ram
 
-  <!-- JS LỌC SẢN PHẨM -->
+        // Ẩn tất cả sản phẩm và nút
+        $(".product").hide();
+        $("#loadMoreGongWrapper, #loadMoreTrongWrapper, #loadMoreRamWrapper").hide();
+
+        // Hiện sản phẩm và nút tương ứng
+        $(".product." + category).slice(0, 4).show();
+        if (category === "gong") {
+          $("#loadMoreGongWrapper").show();
+        } else if (category === "trong") {
+          $("#loadMoreTrongWrapper").show();
+        } else if (category === "ram") {
+          $("#loadMoreRamWrapper").show();
+        }
+      });
+    });
+  </script>
+
+   <!-- JS LỌC SẢN PHẨM -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const links = document.querySelectorAll(".category-link");
@@ -455,6 +509,7 @@
           });
         });
       });
+   document.querySelector('[data-category="gong"]').click();
 
     });
   </script> 
