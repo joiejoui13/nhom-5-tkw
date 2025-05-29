@@ -264,6 +264,20 @@
       );
     });
   </script>
+  <script>
+  $(document).ready(function () {
+    const scrollAmount = 300; // Khoảng cách mỗi lần trượt
+    const container = $('#best-sellers-container');
+
+    $('#scroll-left').click(function () {
+      container.animate({ scrollLeft: '-=' + scrollAmount }, 400);
+    });
+
+    $('#scroll-right').click(function () {
+      container.animate({ scrollLeft: '+=' + scrollAmount }, 400);
+    });
+  });
+</script>
   <!--Video background-->
 <div class="video-background-wrapper">
     <video id="intro-main-video" class="video-background" muted autoplay loop playsinline preload="auto">
