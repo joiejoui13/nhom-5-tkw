@@ -719,8 +719,76 @@
 
     });
   </script> 
-  
-   <!-- Giới Thiệu -->
+ 
+
+<!-- JavaScript cho Carousel Bán Chạy Nhất -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('best-sellers-container');
+    const scrollLeftBtn = document.getElementById('scroll-left');
+    const scrollRightBtn = document.getElementById('scroll-right');
+    let autoScrollInterval;
+
+    if (!container || !scrollLeftBtn || !scrollRightBtn) {
+        console.warn('Best sellers carousel elements not found.');
+        return;
+    }
+
+    // Tạo bản sao của các card để tạo hiệu ứng lặp
+    const duplicateContent = container.innerHTML;
+    container.innerHTML += duplicateContent;
+
+    container.scrollLeft = 0; // Đảm bảo bắt đầu từ vị trí đầu tiên
+
+    const firstCard = container.querySelector('.best-seller-card');
+    if (!firstCard) return; 
+
+    const cardVisibleWidth = firstCard.offsetWidth; 
+    const gap = 32; // Từ class space-x-8 (2rem = 32px)
+    const scrollStep = cardVisibleWidth + gap;
+
+    scrollLeftBtn.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        resetAutoScroll(); 
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+        container.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        resetAutoScroll(); 
+    });
+
+    function autoScroll() {
+        const currentScroll = container.scrollLeft;
+        const maxScroll = container.scrollWidth / 2; // Chia đôi vì đã thêm bản sao
+
+        if (currentScroll >= maxScroll - container.clientWidth) {
+            // Cuộn về vị trí bắt đầu của bản sao đầu tiên
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        }
+    }
+
+    function startAutoScroll() { 
+      stopAutoScroll();
+      autoScrollInterval = setInterval(autoScroll, 4000); 
+    }
+
+    function stopAutoScroll() { 
+      clearInterval(autoScrollInterval);
+    }
+
+    function resetAutoScroll() { 
+      stopAutoScroll();
+      startAutoScroll();
+    }
+
+    startAutoScroll();
+    container.addEventListener('mouseenter', stopAutoScroll); // Dừng khi hover
+    container.addEventListener('mouseleave', startAutoScroll); // Tiếp tục khi rời chuột
+});
+</script>
+    <!-- Giới Thiệu -->
    <section id="gioi-thieu" class="py-16 px-6 text-center">
      <h2 class="text-3xl font-bold mb-6 fade-in-up">Về Chúng Tôi</h2>
      <p class="text-400 max-w-2xl mx-auto fade-in-up fade-in-delay">
@@ -793,73 +861,5 @@
         <p>Optic Care © 2018 - 2023. Design by Trần Như Yến Ngọc Việt Nam</p>
     </div>
 </footer>
-
-<!-- JavaScript cho Carousel Bán Chạy Nhất -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('best-sellers-container');
-    const scrollLeftBtn = document.getElementById('scroll-left');
-    const scrollRightBtn = document.getElementById('scroll-right');
-    let autoScrollInterval;
-
-    if (!container || !scrollLeftBtn || !scrollRightBtn) {
-        console.warn('Best sellers carousel elements not found.');
-        return;
-    }
-
-    // Tạo bản sao của các card để tạo hiệu ứng lặp
-    const duplicateContent = container.innerHTML;
-    container.innerHTML += duplicateContent;
-
-    container.scrollLeft = 0; // Đảm bảo bắt đầu từ vị trí đầu tiên
-
-    const firstCard = container.querySelector('.best-seller-card');
-    if (!firstCard) return; 
-
-    const cardVisibleWidth = firstCard.offsetWidth; 
-    const gap = 32; // Từ class space-x-8 (2rem = 32px)
-    const scrollStep = cardVisibleWidth + gap;
-
-    scrollLeftBtn.addEventListener('click', () => {
-        container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-        resetAutoScroll(); 
-    });
-
-    scrollRightBtn.addEventListener('click', () => {
-        container.scrollBy({ left: scrollStep, behavior: 'smooth' });
-        resetAutoScroll(); 
-    });
-
-    function autoScroll() {
-        const currentScroll = container.scrollLeft;
-        const maxScroll = container.scrollWidth / 2; // Chia đôi vì đã thêm bản sao
-
-        if (currentScroll >= maxScroll - container.clientWidth) {
-            // Cuộn về vị trí bắt đầu của bản sao đầu tiên
-            container.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          container.scrollBy({ left: scrollStep, behavior: 'smooth' });
-        }
-    }
-
-    function startAutoScroll() { 
-      stopAutoScroll();
-      autoScrollInterval = setInterval(autoScroll, 4000); 
-    }
-
-    function stopAutoScroll() { 
-      clearInterval(autoScrollInterval);
-    }
-
-    function resetAutoScroll() { 
-      stopAutoScroll();
-      startAutoScroll();
-    }
-
-    startAutoScroll();
-    container.addEventListener('mouseenter', stopAutoScroll); // Dừng khi hover
-    container.addEventListener('mouseleave', startAutoScroll); // Tiếp tục khi rời chuột
-});
-</script>
  </body>
  </html>
