@@ -118,168 +118,165 @@
 <!-- BÁN CHẠY NHẤT-->
 <section id="danh-muc" class="py-16 px-6 bg-gray-100">
   <h2 class="text-3xl font-bold mb-10 text-center fade-in-up">BÁN CHẠY NHẤT</h2>
+
   <div class="relative">
-    <!-- Scrollable container for cards -->
-    <div id="best-sellers-container" class="flex overflow-x-auto pb-4 space-x-8 scrollbar-hide">
+    <!-- Nút trái -->
+    <button id="scroll-left" aria-label="Scroll Left"
+      class="absolute top-1/2 -left-3 transform -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Container cuộn ngang -->
+    <div id="best-sellers-container" class="flex overflow-x-auto pb-4 space-x-8 scrollbar-hide scroll-smooth">
+
+      <!-- ====== 6 THẺ SẢN PHẨM ===== -->
       <!-- Card 1 -->
-<div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-  <img src="picture/gong-kinh-nhua-1.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-  <div class="pt-4 text-center">
-    <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA NA221393 (50.18.145)</p>
-    
-    <!-- Giá căn giữa, bo tròn, có mũi tên -->
-    <div class="flex justify-center mt-4 group">
-      <a href="na221393.html"
-         class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
-        880.000đ
-        <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-    
-  </div>
-</div>
-<!-- Card 2 -->
-<div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-  <img src="picture/gong-kinh1.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-  <div class="pt-4 text-center">
-    <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA KHOAN NA2341393 (52.22.144)</p>
-    <div class="flex justify-center mt-4 group">
-      <a href="na2341393.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
-        600.000đ
-        <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/gong-kinh-nhua-1.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA NA221393 (50.18.145)</p>
+          <div class="flex justify-center mt-4 group">
+            <a href="na221393.html"
+              class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+              880.000đ
+              <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<!-- Card 3 -->
-<div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-  <img src="picture/gong-kinh-nhua.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-  <div class="pt-4 text-center">
-    <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA NA301393 (44.18.145)</p>
-    <div class="flex justify-center mt-4 group">
-      <a href="na301393.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
-        720.000đ
-        <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
+      <!-- Card 2 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/gong-kinh1.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA KHOAN NA2341393 (52.22.144)</p>
+          <div class="flex justify-center mt-4 group">
+            <a href="na2341393.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+              600.000đ
+              <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/gong-kinh-nhua.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA NA301393 (44.18.145)</p>
+          <div class="flex justify-center mt-4 group">
+            <a href="na301393.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+              720.000đ
+              <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/gong-kinh3.3.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CÀNG KIM LOẠI NA219397 (54.18.256)</p>
+          <div class="flex justify-center mt-4 group">
+            <a href="na219397.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+              490.000đ
+              <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/gong-kinh3.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CỐT KIM LOẠI FE221393 (51.18.136)</p>
+          <div class="flex justify-center mt-4 group">
+            <a href="fe221393.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+              780.000đ
+              <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
+        <img src="picture/gong-kinh4.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
+        <div class="pt-4 text-center">
+          <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CỨNG NA03006 (52.18.147)</p>
+          <div class="flex justify-center mt-4 group">
+            <a href="na03006.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+              390.000đ
+              <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
 
-<!-- Card 4 -->
-<div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-  <img src="picture/gong-kinh3.3.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-  <div class="pt-4 text-center">
-    <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CÀNG KIM LOẠI NA219397 (54.18.256)</p>
-    <div class="flex justify-center mt-4 group">
-      <a href="na219397.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
-        490.000đ
-        <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Card 5 -->
-<div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-  <img src="picture/gong-kinh3.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-  <div class="pt-4 text-center">
-    <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CỐT KIM LOẠI FE221393 (51.18.136)</p>
-    <div class="flex justify-center mt-4 group">
-      <a href="fe221393.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
-        780.000đ
-        <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Card 6 -->
-<div class="best-seller-card flex-none w-64 bg-white rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 p-4">
-  <img src="picture/gong-kinh4.png" alt="Gọng kính" class="w-full h-48 object-contain danh-muc-img">
-  <div class="pt-4 text-center">
-    <p class="font-semibold text-gray-800">GK.M GỌNG NHỰA CỨNG NA03006 (52.18.147)</p>
-    <div class="flex justify-center mt-4 group">
-      <a href="na03006.html" class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
-        390.000đ
-        <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Navigation Buttons --> 
-    <button id="scroll-left" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg z-20 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    <!-- Nút phải -->
+    <button id="scroll-right" aria-label="Scroll Right"
+      class="absolute top-1/2 -right-3 transform -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
       </svg>
     </button>
-    <button id="scroll-right" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg z-20 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
   </div>
-  </section>
+</section>
 
+<!-- Ẩn thanh cuộn -->
 <style>
-  /* Ẩn scrollbar mặc định (có thể thay đổi tuỳ trình duyệt) */
-  .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE và Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
   .scrollbar-hide::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
   }
-
-  /* Hover ảnh zoom */
-  .danh-muc-img {
-    transition: transform 0.5s ease;
-  }
-  .danh-muc-img:hover {
-    transform: scale(1.1);
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 </style>
 
-<!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<!-- JS cuộn -->
 <script>
-  $(document).ready(function() {
-    const container = $('#best-sellers-container');
+  document.getElementById('scroll-left').addEventListener('click', function () {
+    document.getElementById('best-sellers-container').scrollBy({ left: -300, behavior: 'smooth' });
+  });
 
-    $('#scroll-left').click(function() {
-      container.animate({
-        scrollLeft: container.scrollLeft() - 300
-      }, 400);
-    });
-
-    $('#scroll-right').click(function() {
-      container.animate({
-        scrollLeft: container.scrollLeft() + 300
-      }, 400);
-    });
+  document.getElementById('scroll-right').addEventListener('click', function () {
+    document.getElementById('best-sellers-container').scrollBy({ left: 300, behavior: 'smooth' });
   });
 </script>
+
 
   <!--Video background-->
 <div class="video-background-wrapper">
@@ -734,74 +731,6 @@
     });
   </script> 
  
-
-<!-- JavaScript cho Carousel Bán Chạy Nhất -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('best-sellers-container');
-    const scrollLeftBtn = document.getElementById('scroll-left');
-    const scrollRightBtn = document.getElementById('scroll-right');
-    let autoScrollInterval;
-
-    if (!container || !scrollLeftBtn || !scrollRightBtn) {
-        console.warn('Best sellers carousel elements not found.');
-        return;
-    }
-
-    // Tạo bản sao của các card để tạo hiệu ứng lặp
-    const duplicateContent = container.innerHTML;
-    container.innerHTML += duplicateContent;
-
-    container.scrollLeft = 0; // Đảm bảo bắt đầu từ vị trí đầu tiên
-
-    const firstCard = container.querySelector('.best-seller-card');
-    if (!firstCard) return; 
-
-    const cardVisibleWidth = firstCard.offsetWidth; 
-    const gap = 32; // Từ class space-x-8 (2rem = 32px)
-    const scrollStep = cardVisibleWidth + gap;
-
-    scrollLeftBtn.addEventListener('click', () => {
-        container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-        resetAutoScroll(); 
-    });
-
-    scrollRightBtn.addEventListener('click', () => {
-        container.scrollBy({ left: scrollStep, behavior: 'smooth' });
-        resetAutoScroll(); 
-    });
-
-    function autoScroll() {
-        const currentScroll = container.scrollLeft;
-        const maxScroll = container.scrollWidth / 2; // Chia đôi vì đã thêm bản sao
-
-        if (currentScroll >= maxScroll - container.clientWidth) {
-            // Cuộn về vị trí bắt đầu của bản sao đầu tiên
-            container.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          container.scrollBy({ left: scrollStep, behavior: 'smooth' });
-        }
-    }
-
-    function startAutoScroll() { 
-      stopAutoScroll();
-      autoScrollInterval = setInterval(autoScroll, 4000); 
-    }
-
-    function stopAutoScroll() { 
-      clearInterval(autoScrollInterval);
-    }
-
-    function resetAutoScroll() { 
-      stopAutoScroll();
-      startAutoScroll();
-    }
-
-    startAutoScroll();
-    container.addEventListener('mouseenter', stopAutoScroll); // Dừng khi hover
-    container.addEventListener('mouseleave', startAutoScroll); // Tiếp tục khi rời chuột
-});
-</script>
     <!-- Giới Thiệu -->
    <section id="gioi-thieu" class="py-16 px-6 text-center">
      <h2 class="text-3xl font-bold mb-6 fade-in-up">Về Chúng Tôi</h2>
