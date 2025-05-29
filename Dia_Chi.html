@@ -143,15 +143,45 @@
       </div>
     </div>
   </section>
+  <script>
+    const items = document.querySelectorAll('.location-item');
+    const maps = document.querySelectorAll('.location-map iframe');
 
-    <!-- Footer -->
-       <!-- Giới Thiệu -->
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        // đổi trạng thái active
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+
+        // đổi bản đồ
+        const targetId = item.getAttribute('data-map');
+        maps.forEach(map => {
+          map.style.display = map.id === targetId ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+     <!-- Giới Thiệu -->
    <section id="gioi-thieu" class="py-16 px-6 text-center">
      <h2 class="text-3xl font-bold mb-6 fade-in-up">Về Chúng Tôi</h2>
      <p class="text-400 max-w-2xl mx-auto fade-in-up fade-in-delay">
        Kính Mắt OPTIC CARE tự hào mang đến những sản phẩm kính chất lượng cao, đáp ứng nhu cầu thời trang và bảo vệ sức khỏe đôi mắt của bạn.
-     </p>
+     </p><div class="about-brand">
+      <h3>Giới thiệu thương hiệu</h3>
+      <p>
+        Kính Mắt <strong>Opticcare</strong> là một thương hiệu nổi tiếng tại Việt Nam, đặc biệt được yêu thích bởi giới trẻ. Thương hiệu này được thành lập từ năm 2014 và nhanh chóng trở thành một tên tuổi trong ngành hàng phụ kiện thời trang, với hệ thống chuỗi cửa hàng rộng lớn trên toàn quốc.
+      </p>
+      <p>
+        Ngay từ khi thành lập, Opticcare đã gây ấn tượng mạnh với các thiết kế loại bỏ sự rườm rà, thay vào đó là sự đơn giản mà đầy cuốn hút. Phong cách này trở thành dấu ấn riêng biệt, giúp thương hiệu nổi bật giữa thị trường thời trang cạnh tranh khốc liệt.
+      </p>
+      <p>
+        Trong dòng sản phẩm kính mắt mới ra mắt của chúng tôi, sự thanh lịch và tinh tế tiếp tục được tôn vinh. Những chi tiết nhỏ như chất liệu cao cấp, kiểu dáng thanh thoát và sự tỉ mỉ trong từng đường nét làm nên giá trị độc đáo cho kính mắt Opticcare, khiến nó khác biệt hoàn toàn so với các thương hiệu khác.
+      </p>
+    </div>
+    
    </section>
+ 
+   <!-- Footer -->
    <footer class="footer">
     <div class="footer-container">
         <div class="footer-row">
@@ -171,8 +201,7 @@
 
             <div class="footer-column">
                 <h4>Sản phẩm</h4>
-                <ul class="product-list">
-                    <li>Bộ Sưu Tập SUMMER</li>
+                <ul>
                     <li>Gọng Kính</li>
                     <li>Tròng Kính</li>
                     <li>Kính râm</li>
@@ -183,9 +212,9 @@
             <div class="footer-column">
                 <h4>Chính sách mua hàng</h4>
                 <ul>
-                    <li>Hình thức thanh toán</li>
-                    <li>Chính sách giao hàng</li>
-                    <li>Chính sách bảo hành</li>
+                    <li><a href="hinh-thuc-thanh-toan.html">Hình thức thanh toán</a></li>
+                    <li><a href="chinh-sach-giao-hang.html">Chính sách giao hàng</a></li>
+                     <li><a href="chinh-sach-bao-hanh.html">Chính sách bảo hành</a></li>
                 </ul>
             </div>
 
@@ -195,7 +224,7 @@
                 <p>marketing@kinhmatopticcare.com</p>
                 <p>MST: 0108195925</p>
                 <div class="certificates">
-                    <img src="picture/bộ công thương.jpg" alt="Đã thông báo" width="100" height="auto">
+                    <img src="picture/bộ_công_thương.png" alt="Đã thông báo" width="100" height="auto">
                 </div>
             </div>
         </div>
@@ -204,26 +233,6 @@
     <div class="footer-bottom">
         <p>Optic Care © 2018 - 2023. Design by Trần Như Yến Ngọc Việt Nam</p>
     </div>
-</footer>
-  <script>
-    const items = document.querySelectorAll('.location-item');
-    const maps = document.querySelectorAll('.location-map iframe');
-
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        // đổi trạng thái active
-        items.forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
-
-        // đổi bản đồ
-        const targetId = item.getAttribute('data-map');
-        maps.forEach(map => {
-          map.style.display = map.id === targetId ? 'block' : 'none';
-        });
-      });
-    });
-  </script>
-    
+</footer>   
 </body>
-
 </html>
