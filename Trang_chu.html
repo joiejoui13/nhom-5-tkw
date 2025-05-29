@@ -241,43 +241,46 @@
   </div>
   </section>
 
+<style>
+  /* Ẩn scrollbar mặc định (có thể thay đổi tuỳ trình duyệt) */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE và Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
-  <!-- Hover effect -->
-  <script>
-    $(document).ready(function() {
-      $('#best-sellers-container .danh-muc-img').hover( // Cập nhật selector nếu cần, nhưng .danh-muc-img vẫn dùng được
-        function() {
-          $(this).css({
-            'transform': 'scale(1.1)',
-            'transition': 'transform 0.5s ease'
-          });
-        },
-        function() {
-          $(this).css({
-            'transform': 'scale(1)',
-            'transition': 'transform 0.5s ease'
-          });
-        }
-      );
-    });
-  </script>
-  <script>
-  $(document).ready(function () {
-    const scrollAmount = 300; // Khoảng cách mỗi lần trượt
+  /* Hover ảnh zoom */
+  .danh-muc-img {
+    transition: transform 0.5s ease;
+  }
+  .danh-muc-img:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
     const container = $('#best-sellers-container');
 
-    $('#scroll-left').click(function () {
-      container.animate({ scrollLeft: '-=' + scrollAmount }, 400);
+    $('#scroll-left').click(function() {
+      container.animate({
+        scrollLeft: container.scrollLeft() - 300
+      }, 400);
     });
 
-    $('#scroll-right').click(function () {
-      container.animate({ scrollLeft: '+=' + scrollAmount }, 400);
+    $('#scroll-right').click(function() {
+      container.animate({
+        scrollLeft: container.scrollLeft() + 300
+      }, 400);
     });
   });
 </script>
+
   <!--Video background-->
 <div class="video-background-wrapper">
     <video id="intro-main-video" class="video-background" muted autoplay loop playsinline preload="auto">
