@@ -120,20 +120,27 @@
 .header-title {
   display: block;
   width: 100%;
-  margin-top: 10px;
+  margin-bottom: 1rem;
   text-align: left;
   font-size: 1.8rem;
   color: #1e3a8a;
   font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1; 
 }
+
+
 .header {
   width: 100%;
   padding: 2rem 1rem 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column; 
+  align-items: center;
   position: relative;
   z-index: 10;
 }
+
 
 .header-container {
   display: flex;
@@ -147,7 +154,9 @@
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 2; 
+  overflow: visible;
 }
 
 /* Logo */
@@ -182,6 +191,7 @@
 /* Dropdowns */
 .dropdown {
   position: relative;
+  z-index: 999;
 }
 
 .dropdown-btn {
@@ -223,7 +233,7 @@
   opacity: 0;
   transform: scale(0.95);
   transition: all 0.3s ease;
-  z-index: 50;
+  z-index: 999;
   left: 50%;
   transform: translateX(-50%) scale(0.95);
   width: 360px;
@@ -231,7 +241,9 @@
 
 .dropdown:hover .dropdown-menu {
   opacity: 1;
+  visibility: visible;
   transform: translateX(-50%) scale(1);
+  display: block;
 }
 
 .dropdown-content.full {
@@ -1147,16 +1159,6 @@ body {
 /* ==== Chính sách bảo hành ==== */ 
 
 
- body {
-  margin: 0;
-  padding: 0;
-  background-color: #f2f4f8;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 18px; /* chữ to hơn toàn bộ */
-  line-height: 1.8;
-  color: #333;
-}
-
 .policy-wrapper {
   width: 100%;
   background-color: #ffffff;
@@ -1201,5 +1203,4 @@ ul {
 ul li {
   margin-bottom: 8px;
 }
-
 
