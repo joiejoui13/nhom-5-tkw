@@ -1203,4 +1203,89 @@ ul {
 ul li {
   margin-bottom: 8px;
 }
+/*  chính sách giao hàng */
+.policy-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Tiêu đề chính */
+.policy-container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #d30726;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Các mục nhỏ trong chính sách */
+.policy-section {
+  margin-bottom: 30px;
+}
+
+/* Tiêu đề từng mục */
+.policy-section h2 {
+  font-size: 22px;
+  color: #d30726;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #d30726;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Nội dung đoạn văn */
+.policy-section p {
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* Danh sách */
+.policy-section ul {
+  list-style-type: disc;
+  padding-left: 25px;
+  margin-bottom: 18px;
+}
+
+.policy-section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Link trong phần chính sách */
+.policy-section a {
+  color: #d30726;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.policy-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media (max-width: 768px) {
+  .policy-container {
+    padding: 30px 20px;
+  }
+  .policy-container h1 {
+    font-size: 28px;
+  }
+  .policy-section h2 {
+    font-size: 18px;
+  }
+  .policy-section p, .policy-section ul li {
+    font-size: 15px;
+  }
+}
 
