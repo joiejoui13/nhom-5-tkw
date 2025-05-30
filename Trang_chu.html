@@ -1043,5 +1043,26 @@
         <p>Optic Care © 2018 - 2023.</p>
     </div>
 </footer>
+   <!-- Nút Zalo với chữ -->
+  <a id="zaloBtn" href="https://zalo.me/g/vpdgks851" target="_blank" title="Liên hệ Zalo">
+    Zalo
+  </a>
+
+  <!-- Nút lên đầu trang -->
+  <button id="backToTopBtn" title="Lên đầu trang">
+    <i class="fas fa-home"></i>
+  </button>
+  <script>
+  // Hiện nút khi cuộn xuống
+  window.onscroll = function() {
+    document.getElementById("backToTopBtn").style.display =
+      window.pageYOffset > 100 ? "flex" : "none";
+  };
+
+  // Cuộn lên đầu trang khi click
+  document.getElementById("backToTopBtn").onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
  </body>
  </html>
