@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm | Kính Mắt OPTIC CARE</title>
+    <title>SẢN PHẨM | Kính Mắt OPTIC CARE</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="../Css/trangcon.css" />
 </head>
+    
 <body>
     <!-- Top Info Bar -->
     <div class="fixed top-0 left-0 right-0 z-30 bg-[#19c8c2] text-white text-sm py-2 px-6 flex justify-end items-center space-x-4 shadow-md">
@@ -29,14 +25,17 @@
     <header class="header">
         <div class="header-container">
             <!-- Logo -->
-            <a href="Trang_chu.html" class="logo-link">
+            <a href="../Trang_chu.html" class="logo-link">
                 <div class="logo">
-                    <img src="picture/logo-trang.png" alt="Logo" class="logo-img">
+                    <img src="../picture/logo-trang.png" alt="Logo" class="logo-img">
                 </div>
             </a>
 
             <!-- Navigation -->
             <nav class="nav">
+                 <a href="../Trang_chu.html" class="nav-link">
+                     <span>Trang chủ</span>
+                 </a>
                 <!-- Mega Dropdown Sản Phẩm -->
                 <div class="dropdown">
                     <button class="dropdown-btn">
@@ -58,7 +57,7 @@
                 </div>
 
                 <!-- Tìm cửa hàng -->
-                <a href="#" class="nav-link">
+                <a href="Dia_Chi.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -78,8 +77,8 @@
                     <div class="dropdown-menu narrow">
                         <div class="triangle triangle-center"></div>
                         <div class="dropdown-content full">
-                            <a href="#">VỀ CHÚNG TÔI</a>
-                            <a href="#">BLOG</a>
+                            <a href="../Trang_chu.html">VỀ CHÚNG TÔI</a>
+                            <a href="blog.html">BLOG</a>
                         </div>
                     </div>
                 </div>
@@ -105,7 +104,9 @@
                 </button>
             </div>
         </div>
-    </header>
+     <h1 class="header-title">Cửa hàng kính mắt - OPTIC CARE</h1>
+</header>
+
 
      <div class="container">
         <div class="sidebar">
@@ -403,5 +404,77 @@
         // Initialize products
         generateProducts();
     </script>
+     </section>
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-column footer-left">
+                <img src="../picture/logo-removebg.png" alt="Optic Care Logo" class="logo" width="150" height="auto">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button><img src="../picture/mũi tên.png" alt="Gửi"></button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="../picture/facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="../picture/ig.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="../picture/youtube.jpg" alt="YouTube"></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Sản phẩm</h4>
+                <ul>
+                    <li>Gọng Kính</li>
+                    <li>Tròng Kính</li>
+                    <li>Kính râm</li>
+                  
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Chính sách mua hàng</h4>
+                <ul>
+                    <li><a href="hinh-thuc-thanh-toan.html">Hình thức thanh toán</a></li>
+                    <li><a href="chinh-sach-giao-hang.html">Chính sách giao hàng</a></li>
+                     <li><a href="hinh-sach-bao-hanh.html">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Thông tin liên hệ</h4>
+                <p>19000359</p>
+                <p>marketing@kinhmatopticcare.com</p>
+                <p>MST: 0108195925</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Optic Care © 2018 - 2023.</p>
+    </div>
+</footer>
+   <!-- Nút Zalo với chữ -->
+  <a id="zaloBtn" href="https://zalo.me/g/vpdgks851" target="_blank" title="Liên hệ Zalo">
+    Zalo
+  </a>
+
+  <!-- Nút lên đầu trang -->
+  <button id="backToTopBtn" title="Lên đầu trang">
+    <i class="fas fa-home"></i>
+  </button>
+  <script>
+  // Hiện nút khi cuộn xuống
+  window.onscroll = function() {
+    document.getElementById("backToTopBtn").style.display =
+      window.pageYOffset > 100 ? "flex" : "none";
+  };
+
+  // Cuộn lên đầu trang khi click
+  document.getElementById("backToTopBtn").onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
 </body>
 </html>
