@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ Thống Cửa Hàng | Kính Mắt OPTIC CARE</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="../CSS/Dia_chi.css" />
 </head>
     
 <body>
@@ -30,15 +25,15 @@
     <header class="header">
         <div class="header-container">
             <!-- Logo -->
-            <a href="Trang_chu.html" class="logo-link">
+            <a href="../Trang_chu.html" class="logo-link">
                 <div class="logo">
-                    <img src="picture/logo-trang.png" alt="Logo" class="logo-img">
+                    <img src="../picture/logo-trang.png" alt="Logo" class="logo-img">
                 </div>
             </a>
 
             <!-- Navigation -->
             <nav class="nav">
-                 <a href="Trang_chu.html" class="nav-link">
+                 <a href="../Trang_chu.html" class="nav-link">
                      <span>Trang chủ</span>
                  </a>
                 <!-- Mega Dropdown Sản Phẩm -->
@@ -54,15 +49,15 @@
                     <div class="dropdown-menu narrow">
                         <div class="triangle triangle-center"></div>
                         <div class="dropdown-content full">
-                            <a href="#">GỌNG KÍNH</a>
-                            <a href="#">TRÒNG KÍNH</a>
-                            <a href="#">KÍNH RÂM</a>
+                                <a href="../San_pham/xem_them_gong.html">GỌNG KÍNH</a>
+                                <a href="../San_pham/xem_them_trong.html">TRÒNG KÍNH</a>
+                                <a href="../San_pham/xem_them_kinh_ram.html">KÍNH RÂM</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tìm cửa hàng -->
-                <a href="#" class="nav-link">
+                <a href="Dia_Chi.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -82,8 +77,8 @@
                     <div class="dropdown-menu narrow">
                         <div class="triangle triangle-center"></div>
                         <div class="dropdown-content full">
-                            <a href="#">VỀ CHÚNG TÔI</a>
-                            <a href="#">BLOG</a>
+                            <a href="#gioi-thieu">VỀ CHÚNG TÔI</a>
+                            <a href="blog.html">BLOG</a>
                         </div>
                     </div>
                 </div>
@@ -161,23 +156,13 @@
       });
     });
   </script>
-     <!-- Giới Thiệu -->
+    <!-- Giới Thiệu -->
    <section id="gioi-thieu" class="py-16 px-6 text-center">
-     <h2 class="text-3xl font-bold mb-6 fade-in-up">Về Chúng Tôi</h2>
-     <p class="text-400 max-w-2xl mx-auto fade-in-up fade-in-delay">
+     <h2 class="text-3xl font-bold mb-6">Về Chúng Tôi</h2>
+     <p class="text-400 max-w-2xl mx-auto">
        Kính Mắt OPTIC CARE tự hào mang đến những sản phẩm kính chất lượng cao, đáp ứng nhu cầu thời trang và bảo vệ sức khỏe đôi mắt của bạn.
-     </p><div class="about-brand">
-      <h3>Giới thiệu thương hiệu</h3>
-      <p>
-        Kính Mắt <strong>Opticcare</strong> là một thương hiệu nổi tiếng tại Việt Nam, đặc biệt được yêu thích bởi giới trẻ. Thương hiệu này được thành lập từ năm 2014 và nhanh chóng trở thành một tên tuổi trong ngành hàng phụ kiện thời trang, với hệ thống chuỗi cửa hàng rộng lớn trên toàn quốc.
-      </p>
-      <p>
-        Ngay từ khi thành lập, Opticcare đã gây ấn tượng mạnh với các thiết kế loại bỏ sự rườm rà, thay vào đó là sự đơn giản mà đầy cuốn hút. Phong cách này trở thành dấu ấn riêng biệt, giúp thương hiệu nổi bật giữa thị trường thời trang cạnh tranh khốc liệt.
-      </p>
-      <p>
-        Trong dòng sản phẩm kính mắt mới ra mắt của chúng tôi, sự thanh lịch và tinh tế tiếp tục được tôn vinh. Những chi tiết nhỏ như chất liệu cao cấp, kiểu dáng thanh thoát và sự tỉ mỉ trong từng đường nét làm nên giá trị độc đáo cho kính mắt Opticcare, khiến nó khác biệt hoàn toàn so với các thương hiệu khác.
-      </p>
-    </div>
+     </p>
+
     
    </section>
  
@@ -186,16 +171,16 @@
     <div class="footer-container">
         <div class="footer-row">
             <div class="footer-column footer-left">
-                <img src="picture/logo-removebg.png" alt="Optic Care Logo" class="logo" width="150" height="auto">
+                <img src="../picture/logo-removebg.png" alt="Optic Care Logo" class="logo" width="150" height="auto">
                 <p>Đăng kí để nhận tin mới nhất</p>
                 <div class="subscribe">
                     <input type="email" placeholder="Để lại email của bạn">
-                    <button><img src="picture/mũi tên.png" alt="Gửi"></button>
+                    <button><img src="../picture/mũi tên.png" alt="Gửi"></button>
                 </div>
                 <div class="social-icons">
-                    <a href="#"><img src="picture/facebook.jpg" alt="Facebook"></a>
-                    <a href="#"><img src="picture/ig.jpg" alt="Instagram"></a>
-                    <a href="#"><img src="picture/youtube.jpg" alt="YouTube"></a>
+                    <a href="#"><img src="../picture/facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="../picture/ig.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="../picture/youtube.jpg" alt="YouTube"></a>
                 </div>
             </div>
 
@@ -214,7 +199,7 @@
                 <ul>
                     <li><a href="hinh-thuc-thanh-toan.html">Hình thức thanh toán</a></li>
                     <li><a href="chinh-sach-giao-hang.html">Chính sách giao hàng</a></li>
-                     <li><a href="chinh-sach-bao-hanh.html">Chính sách bảo hành</a></li>
+                     <li><a href="hinh-sach-bao-hanh.html">Chính sách bảo hành</a></li>
                 </ul>
             </div>
 
@@ -223,9 +208,6 @@
                 <p>19000359</p>
                 <p>marketing@kinhmatopticcare.com</p>
                 <p>MST: 0108195925</p>
-                <div class="certificates">
-                    <img src="picture/bộ_công_thương.png" alt="Đã thông báo" width="100" height="auto">
-                </div>
             </div>
         </div>
     </div>
@@ -233,6 +215,27 @@
     <div class="footer-bottom">
         <p>Optic Care © 2018 - 2023.</p>
     </div>
-</footer>   
-</body>
-</html>
+</footer>
+   <!-- Nút Zalo với chữ -->
+  <a id="zaloBtn" href="https://zalo.me/g/vpdgks851" target="_blank" title="Liên hệ Zalo">
+    Zalo
+  </a>
+
+  <!-- Nút lên đầu trang -->
+  <button id="backToTopBtn" title="Lên đầu trang">
+    <i class="fas fa-home"></i>
+  </button>
+  <script>
+  // Hiện nút khi cuộn xuống
+  window.onscroll = function() {
+    document.getElementById("backToTopBtn").style.display =
+      window.pageYOffset > 100 ? "flex" : "none";
+  };
+
+  // Cuộn lên đầu trang khi click
+  document.getElementById("backToTopBtn").onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+ </body>
+ </html>
