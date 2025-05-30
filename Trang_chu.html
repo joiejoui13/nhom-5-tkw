@@ -912,45 +912,63 @@
   </div>
   </section>
   <!--JS Hiển thị nút thêm sản phẩm-->
-  <script>
+ <script>
     $(document).ready(function () {
-  // Mặc định hiển thị gọng kính
-  $(".product").hide();
-  $(".product.gong").slice(0, 8).show();
-  $("#loadMoreGongWrapper").show();
+      // Mặc định hiện gọng kính
+      $(".product").hide();
+      $(".product.gong").slice(0, 8).show();
+      $("#loadMoreGongWrapper").show();
 
-  $(".category-link").on("click", function (e) {
-    e.preventDefault();
+      $(".category-link").on("click", function (e) {
+        e.preventDefault();
+        const category = $(this).data("category"); // gong, trong, ram
 
-    const category = $(this).data("category");
+        // Ẩn tất cả sản phẩm và nút
+        $(".product").hide();
+        $("#loadMoreGongWrapper, #loadMoreTrongWrapper, #loadMoreRamWrapper").hide();
 
-    // Đổi màu link active
-    $(".category-link").removeClass("text-orange-500");
-    $(this).addClass("text-orange-500");
-
-    // Ẩn tất cả sản phẩm và nút xem thêm
-    $(".product").hide();
-    $("#loadMoreGongWrapper, #loadMoreTrongWrapper, #loadMoreRamWrapper").hide();
-
-    // Hiển thị sản phẩm theo danh mục, giới hạn 8 sp
-    if(category === "all") {
-      $(".product").slice(0, 8).show();
-    } else {
-      $(".product." + category).slice(0, 8).show();
-      if (category === "gong") {
-        $("#loadMoreGongWrapper").show();
-      } else if (category === "trong") {
-        $("#loadMoreTrongWrapper").show();
-      } else if (category === "ram") {
-        $("#loadMoreRamWrapper").show();
-      }
-    }
-  });
-
-  // Kích hoạt danh mục mặc định
-  $('[data-category="gong"]').click();
-});
+        // Hiện sản phẩm và nút tương ứng
+        $(".product." + category).slice(0, 8).show();
+        if (category === "gong") {
+          $("#loadMoreGongWrapper").show();
+        } else if (category === "trong") {
+          $("#loadMoreTrongWrapper").show();
+        } else if (category === "ram") {
+          $("#loadMoreRamWrapper").show();
+        }
+      });
+    });
   </script>
+
+   <!-- JS LỌC SẢN PHẨM -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".category-link");
+      const products = document.querySelectorAll(".product");
+
+      links.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Xóa màu tất cả liên kết
+          links.forEach(l => l.classList.remove("text-orange-500"));
+          this.classList.add("text-orange-500");
+
+          const category = this.getAttribute("data-category");
+
+          products.forEach(product => {
+            if (category === "all" || product.classList.contains(category)) {
+              product.style.display = "block";
+            } else {
+              product.style.display = "none";
+            }
+          });
+        });
+      });
+   document.querySelector('[data-category="gong"]').click();
+
+    });
+  </script> 
  
     <!-- Giới Thiệu -->
    <section id="gioi-thieu" class="py-16 px-6 text-center">
