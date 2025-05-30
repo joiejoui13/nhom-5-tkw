@@ -1,93 +1,212 @@
-<!-- product-detail.html -->
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Chi tiết sản phẩm</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="w-screen h-screen bg-gray-50 p-4">
-  <div class="max-w-10xl mx-auto">
-    <a href="Trang_chu.html" class="text-blue-600 underline mb-4 inline-block">← Quay lại trang trước</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KR.M KÍNH RÂM KIM LOẠI/NHỰA H8827 62 (62.13.146) | Kính Mắt OPTIC CARE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="trangcon.css" />
+  </head>
+<body>
+    <!-- Top Info Bar -->
+<div class="fixed top-0 left-0 right-0 z-30 bg-[#19c8c2] text-white text-sm py-2 px-6 flex justify-end items-center space-x-4 shadow-md">
+  <a href="chinh_sach.html" class="hover:text-purple-400 transition">Chính sách</a>
+  <a href="tra_cuu_don_hang.html" class="hover:text-purple-400 transition">Tra cứu đơn hàng</a>
+  <a href="login.html" class="flex items-center space-x-1 hover:text-purple-400 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+    <span>Tài Khoản</span>
+  </a>
+</div>
 
-    <!-- FLEX CHIA 2 PHẦN -->
-    <div class="flex flex-col md:flex-row gap-6 items-start">
-      <!-- Ảnh bên trái -->
-      <div class="md:w-1/3 w-full">
-        <img src="picture\kinh-ram1.png" alt="Kính râm" class="rounded-xl w-80 h-80 mb-4">
-           <img src="picture/kinh-ram1.1.png" alt="Gọng kính phụ" class="rounded-xl w-80 h-80 mb-4 cursor-pointer" />
-
+<!-- Header -->
+<header class="header">
+  <div class="header-container triangle-center">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="Trang_chu.html" class="nav-link">
+      <img src="picture/logo-trang.png" alt="Logo" class="logo-img"></a>
     </div>
 
-       <!-- Thông tin bên phải -->
-      <div class="md:w-2/3 w-full space-y-4">
-        <h1 id="productTitle" class="text-xl font-bold text-gray-800">HELEN KELLER</h1>
-        <p id="productPrice" class="text-cyan-600 text-lg font-semibold">650.000đ</p>
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="Trang_chu.html" class="nav-link">
+        <span>Trang Chủ</span>
+      </a>
+      <!-- Mega Dropdown Sản Phẩm -->
+      <div class="dropdown">
+  <button class="dropdown-btn">
+    <span>Sản Phẩm</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
-        <div id="productDescription" class="text-gray-700 text-base leading-relaxed space-y-2">
-          <p>•  Mã sản phẩm: H8827 62</p>
-          <p>•  Chất liệu: Kim loại/ Nhựa</p>
-          <p>•  Hình dạng: Đa giác </p>
-          <p>•  Thông số: 62.13.146 </p>
-          <p>•  Xuất xứ: Trung Quốc</p>
-
-          <p><strong>Thông tin</strong><br>
-            NK và PP: CÔNG TY TNHH THƯƠNG MẠI MỘT KHÔNG MỘT<br>
-            Địa chỉ: 16 Alexandre De Rhodes, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
-          </p>
-
-          <p><strong>Cảnh báo:</strong> Bảo quản trong hộp</p>
-          <p><strong>Hướng dẫn sử dụng:</strong> Dùng để đeo mắt, tránh tiếp xúc trực tiếp với nhiệt độ cao</p>
-
-          <p><strong>Dịch vụ:</strong><br>
-            • Miễn phí tư vấn, đo, khám mắt định kỳ<br>
-            • Miễn phí đổi trả trong vòng 7 ngày nếu sản phẩm có lỗi do nhà sản xuất<br>
-            • Hotline: 
-          </p>
-        </div>
-
-        <!-- SỐ LƯỢNG + NÚT -->
-        <div class="flex items-center flex-wrap gap-4 pt-4 border-t border-gray-200 mt-4">
-          <!-- Số lượng -->
-          <div class="flex items-center">
-            <label class="mr-2 text-sm text-gray-800 font-bold">Số lượng</label>
-            <div class="flex items-center border border-gray-300 rounded">
-              <button class="px-3 text-base text-gray-600 hover:text-black">−</button>
-              <input type="text" value="1" class="w-12 text-center border-l border-r border-gray-300 outline-none" />
-              <button class="px-3 text-base text-gray-600 hover:text-black">+</button>
-            </div>
-          </div>
-
-          <!-- Thêm vào giỏ hàng -->
-          <button class="bg-gray-500 hover:bg-gray-600 text-white font-medium px-5 py-2 rounded text-sm">
-            Thêm vào giỏ hàng
-          </button>
-
-          <!-- Mua ngay -->
-          <button class="bg-blue-300 hover:bg-blue-400 text-gray-800 font-medium px-5 py-2 rounded text-sm">
-            Mua ngay
-          </button>
-        </div>
-      </div>
+  <div class="dropdown-menu narrow">
+    <div class="triangle triangle-center"></div>
+    <div class="dropdown-content full">
+      <a href="filter.html?category=gong-kinh">GỌNG KÍNH</a>
+      <a href="filter.html?category=trong-kinh">TRÒNG KÍNH</a>
+      <a href="filter.html?category=kinh-ram">KÍNH RÂM</a>
     </div>
   </div>
+</div>
 
-  <!-- JavaScript xử lý dữ liệu từ URL -->
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const title = params.get("title");
-    const price = params.get("price");
-    const img = params.get("img");
-    const desc = params.get("desc");
 
-    document.getElementById("productTitle").textContent = title || "Tên thương hiệu:HELEN KELLER";
-    document.getElementById("productPrice").textContent = price || "Giá: 650.000đ";
-    document.getElementById("productImage").src = img || "picture\kinh-ram1.png";
-    
-    if (desc) {
-      document.getElementById("productDescription").innerHTML = desc;
-    }
-  </script>
-  
+      <!-- Tìm cửa hàng -->
+      <a href="Dia_Chi.html" class="nav-link">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>Tìm Cửa Hàng</span>
+      </a>
+
+      <!-- Mega Dropdown Xem Thêm -->
+      <div class="dropdown">
+        <button class="dropdown-btn">
+          <span>Xem Thêm</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div class="dropdown-menu narrow">
+          <div class="triangle triangle-center"></div>
+          <div class="dropdown-content full">
+            <a href="#">VỀ CHÚNG TÔI</a>
+            <a href="#">BLOG</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar -->
+    <div class="search">
+      <input type="text" placeholder="Các mẫu kính râm hot nhất...">
+      <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="cart">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13m-2-5l-1 5m-4-5v5" />
+        </svg>
+        <span>Giỏ Hàng</span>
+      </button>
+    </div>
+  </div>
+</header>
+    <div class="container">
+        <div class="product-section">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="picture/kinh-ram1.png" alt="Gọng kính" id="mainImage">
+                </div>
+                
+                <div class="thumbnail-images">
+                    <div class="thumbnail active" onclick="changeMainImage('https://via.placeholder.com/400x400/f8f9fa/666?text=Gọng+Kính+Nhựa')">
+                        <img src="picture/kinh-ram1.png" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeMainImage('https://via.placeholder.com/400x400/f8f9fa/333?text=Gọng+Kính+Đen')">
+                        <img src="picture/kinh-ram1.1.png" alt="Thumbnail 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="product-category">Kính râm</div>
+                
+                <h1 class="product-title">KR.M KÍNH RÂM KIM LOẠI/NHỰA H8827 62 (62.13.146)</h1>
+                
+                <div class="product-price">650.000đ</div>
+
+                <div class="color-options">
+                    <div class="color-label">Màu sắc:</div>
+                    <div class="color-circles">
+                        <div class="color-circle color-black active"></div>
+                        <div class="color-circle color-gray"></div>
+                        <div class="color-circle color-blue"></div>
+                        <div class="color-circle color-purple"></div>
+                        <div class="color-circle color-beige"></div>
+                        <div class="color-circle color-pink"></div>
+                    </div>
+                </div>
+
+                <div class="product-description">
+                    <p>Kính râm thời trang là sự lựa chọn lý tưởng dành cho những ai yêu thích phong cách cá tính và hiện đại. Với thiết kế tinh tế cùng chất liệu cao cấp, sản phẩm không chỉ bảo vệ đôi mắt khỏi tia UV có hại mà còn tôn lên vẻ ngoài sành điệu và cuốn hút cho người dùng. Đặc điểm nổi bật:</p>
+                    </div>
+
+                <ul class="features">
+                    <li>Gọng hình oval</li>
+                    <li>Chất liệu nhựa cao cấp</li>
+                    <li>Thiết kế hiện đại, năng động</li>
+                    <li>Sản phẩm này được thiết kế với gọng hình oval tinh tế và thanh lịch, giúp cho khuôn mặt của bạn trở nên hoàn hảo và thu hút. Chất liệu nhựa mang lại sự bền vững và êm ái cho người dùng.</li>
+                </ul>
+
+                <div class="quantity-section">
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="changeQuantity(-1)">−</button>
+                        <input type="number" class="quantity-input" value="1" min="1" id="quantity">
+                        <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                    </div>
+                    
+                    <button class="add-to-cart" onclick="addToCart()">
+                        <span>Thêm vào giỏ</span>
+                        <span>• 650.000đ</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeQuantity(delta) {
+            const input = document.getElementById('quantity');
+            const currentValue = parseInt(input.value);
+            const newValue = Math.max(1, currentValue + delta);
+            input.value = newValue;
+            updateCartPrice();
+        }
+
+        function updateCartPrice() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const price = 880000;
+            const total = (price * quantity).toLocaleString('vi-VN');
+            document.querySelector('.add-to-cart span:last-child').textContent = `• ${total}đ`;
+        }
+
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            alert(`Đã thêm ${quantity} sản phẩm vào giỏ hàng!`);
+        }
+
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+
+        // Color selection
+        document.querySelectorAll('.color-circle').forEach(circle => {
+            circle.addEventListener('click', function() {
+                document.querySelectorAll('.color-circle').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Quantity input validation
+        document.getElementById('quantity').addEventListener('change', function() {
+            if (this.value < 1) this.value = 1;
+            updateCartPrice();
+        });
+    </script>
 </body>
 </html>
