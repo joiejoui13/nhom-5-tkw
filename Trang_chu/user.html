@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Đăng nhập - Optic Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    /* Reset và định nghĩa font */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #e0fdfb;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #19c8c2;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Khung chính */
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container của form và ảnh */
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Phần hình ảnh */
+.login-img {
+  flex: 1;
+  display: block;
+}
+
+.login-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form */
+.login-form {
+  flex: 1;
+  padding: 40px 32px;
+}
+
+.login-form h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-form p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #19c8c2;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0ea7a1;
+}
+
+/* Giới tính */
+.gender-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.radio-label {
+  font-size: 14px;
+}
+
+/* Nút submit */
+.submit-btn {
+  width: 100%;
+  background-color: #19c8c2;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0ea7a1;
+}
+
+/* Link */
+a {
+  color: #19c8c2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-img {
+    display: none;
+  }
+
+  .login-form {
+    padding: 24px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+ 
+  <header>
+    <a href="../Trang_chu.html" style="text-decoration: none; display: flex; align-items: center; gap: 15px; color: white;">
+      <img src="../picture/logo-trang.png" alt="Optic Care Logo" class="header-logo">
+    </a>
+  </header>
+
+  <div class="main-container">
+    <div class="login-container">
+      <div class="login-img">
+        <img src="../picture/model-taikhoan.jpg" alt="Login Image" />
+      </div>
+      <div class="login-form">
+        <h4 class="fw-bold mb-1 text-center">Thông tin tài khoản</h4>
+        <p class="text-muted mb-4">Cập nhật thông tin cá nhân để trải nghiệm tốt hơn với chúng tôi        </p>
+        <form id="loginForm">
+                      <div class="form-group">
+                <label class="form-label">Họ và tên</label>
+                <input type="text" class="form-input" value="Nguyen Hien" placeholder="Nhập họ và tên">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-input" value="0123456789" placeholder="Nhập số điện thoại">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" value="joiejoui1309@gmail.com" placeholder="Nhập email">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Ngày tháng năm sinh</label>
+                <input type="date" class="form-input" value="2004-07-14">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Giới tính</label>
+                <div class="gender-group">
+                    <div class="radio-item">
+                        <input type="radio" name="gender" value="male" class="radio-input" id="male" checked>
+                        <label for="male" class="radio-label">Nam</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="gender" value="female" class="radio-input" id="female">
+                        <label for="female" class="radio-label">Nữ</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="gender" value="other" class="radio-input" id="other">
+                        <label for="other" class="radio-label">Khác</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Hoàn thành</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = {
+        name: document.querySelector('input[type="text"]').value,
+        phone: document.querySelector('input[type="tel"]').value,
+        email: document.querySelector('input[type="email"]').value,
+        birthdate: document.querySelector('input[type="date"]').value,
+        gender: document.querySelector('input[name="gender"]:checked').value
+    };
+
+    alert('Thông tin đã được cập nhật thành công!');
+    console.log('Form data:', formData);
+
+    // Chuyển về trang chủ sau khi cập nhật xong
+    window.location.href = './Trang_chu/Trangchu_after.html';
+});
+
+    </script>
+</body>
+</html>
