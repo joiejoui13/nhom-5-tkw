@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng của bạn</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-7xl mx-auto p-4">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+      🛒 Giỏ hàng của bạn
+    </h2>
+
+    <div class="flex flex-col lg:flex-row gap-6">
+      <div class="flex-1 flex flex-col gap-4">
+        <!-- Sản phẩm 1 -->
+        <div class="bg-white p-4 rounded-2xl shadow-md flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <input type="checkbox" class="form-checkbox w-5 h-5">
+            <img src="picture/gong-kinh1" alt="Hình ảnh" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-semibold">GK.M GỌNG NHỰA T88577 53<br>(53.18.143)</p>
+              <p class="text-gray-500 text-sm">Màu sắc: Đen</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <p class="w-24 text-right">880.000đ</p>
+            <div class="flex items-center border rounded-xl overflow-hidden">
+              <button class="qty-decrease px-2">-</button>
+              <input type="text" class="qty-input w-10 text-center border-l border-r" value="1">
+              <button class="qty-increase px-2">+</button>
+            </div>
+            <p class="item-total w-24 text-right">880.000đ</p>
+          </div>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="bg-white p-4 rounded-2xl shadow-md flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <input type="checkbox" class="form-checkbox w-5 h-5">
+            <img src="picture/gong-kinh3" alt="Hình ảnh" class="w-20 h-20 object-cover rounded">
+            <div>
+              <p class="font-semibold">GK.M GỌNG NHỰA 3013 48 <br>(48.18.142)</p>
+              <p class="text-gray-500 text-sm">Màu sắc: Trắng </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <p class="w-24 text-right">450.000đ</p>
+            <div class="flex items-center border rounded-xl overflow-hidden">
+              <button class="qty-decrease px-2">-</button>
+              <input type="text" class="qty-input w-10 text-center border-l border-r" value="1">
+              <button class="qty-increase px-2">+</button>
+            </div>
+            <p class="item-total w-24 text-right">450.000đ</p>
+          </div>
+        </div>
+
+        <!-- Nút xóa -->
+        <button class="mt-4 bg-gray-200 hover:bg-gray-300 px-6 py-2 rounded-lg w-max">Xóa sản phẩm đã chọn</button>
+      </div>
+
+      <!-- Tóm tắt đơn hàng -->
+      <div class="bg-white p-6 rounded-2xl shadow-md w-full lg:w-96">
+        <h3 class="text-xl font-semibold mb-4">Tóm tắt đơn hàng</h3>
+        <div class="flex justify-between mb-2">
+          <span>Tạm tính</span>
+          <span class="subtotal">1.760.000đ</span>
+        </div>
+        <div class="flex justify-between font-bold text-lg">
+          <span>Tổng</span>
+          <span class="total">1.760.000đ</span>
+        </div>
+        <a href="Trang_chu/Thanh-toan.html">
+          <button class="mt-4 w-full bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-2 rounded-lg">
+            Thanh toán ngay
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Nút tiếp tục mua hàng -->
+    <div class="mt-6 text-right">
+      <a href="../Trang_chu.html">
+        <button class="bg-cyan-400 hover:bg-cyan-500 text-white px-6 py-2 rounded-lg">
+          Tiếp tục mua hàng
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function formatCurrency(number) {
+      return number.toLocaleString('vi-VN') + 'đ';
+    }
+
+    function updateTotals() {
+      let total = 0;
+      $('.item-total').each(function () {
+        const amount = parseInt($(this).text().replace(/\D/g, ''));
+        total += amount;
+      });
+      $('.subtotal, .total').text(formatCurrency(total));
+    }
+
+    function updateItemTotal(input) {
+      const parent = input.closest('.flex.items-center.gap-4');
+      const unitPrice = parseInt(parent.find('p').eq(0).text().replace(/\D/g, ''));
+      const qty = parseInt(input.val());
+      const newTotal = unitPrice * qty;
+      parent.find('.item-total').text(formatCurrency(newTotal));
+      updateTotals();
+    }
+
+    $(document).ready(function () {
+      $('.qty-increase').click(function () {
+        const input = $(this).siblings('.qty-input');
+        input.val(parseInt(input.val()) + 1);
+        updateItemTotal(input);
+      });
+
+      $('.qty-decrease').click(function () {
+        const input = $(this).siblings('.qty-input');
+        const newVal = Math.max(1, parseInt(input.val()) - 1);
+        input.val(newVal);
+        updateItemTotal(input);
+      });
+
+      $('.qty-input').change(function () {
+        updateItemTotal($(this));
+      });
+
+      updateTotals();
+    });
+  </script>
+</body>
+</html>
