@@ -171,26 +171,23 @@
     </div>
   </div>
   
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Validate form fields
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      
-      if (email && password) {
-        // Show success alert
-        alert('Bạn đã đăng nhập thành công');
-        
-        // Redirect after 1 second
-        setTimeout(() => {
-          window.location.href = 'Trang_chu_after.html';
-        }, 1000);
-      } else {
-        alert('Vui lòng nhập đầy đủ thông tin!');
-      }
-    });
-  </script>
+ <script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (email && password) {
+      alert('Bạn đã đăng nhập thành công');
+      setTimeout(() => {
+        window.location.href = '../Trangchu_after.html';
+      }, 1000);
+    } else {
+      alert('Vui lòng nhập đầy đủ thông tin!');
+    }
+  });
+</script>
+
 </body>
 </html>
