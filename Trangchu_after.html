@@ -1,0 +1,1085 @@
+
+<!DOCTYPE html>
+ <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ | Kính Mắt OPTIC CARE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+ <body class="relative min-h-screen grid-bg">
+
+<!-- Top Info Bar -->
+<div class="top-info-bar">
+  <a href="Trang_chu/chinh_sach.html">Chính sách</a>
+  <a href="Trang_chu/tra_cuu_don_hang.html">Tra cứu đơn hàng</a>
+
+  <div class="user-dropdown">
+    <div class="user-icon" id="userIcon">
+      <img src="picture/mau-2.jpg" alt="Avatar" class="avatar-img">
+    </div>
+    <div class="login" id="userMenu">
+      <a href="Trang_chu/user.html">Thông tin cá nhân</a>
+      <a href="#" onclick="confirmLogout()">Đăng xuất</a>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Dropdown Logic -->
+<script>
+  const userIcon = document.getElementById("userIcon");
+  const userMenu = document.getElementById("userMenu");
+
+  userIcon.addEventListener("click", function (e) {
+    e.stopPropagation(); // Ngăn không cho sự kiện lan ra ngoài
+    userMenu.style.display = userMenu.style.display === "block" ? "none" : "block";
+  });
+
+  // Ẩn menu khi click ra ngoài
+  window.addEventListener("click", function () {
+    userMenu.style.display = "none";
+  });
+
+  // Hàm đăng xuất
+  function confirmLogout() {
+    if (confirm("Bạn có chắc chắn muốn đăng xuất?")) {
+      localStorage.removeItem("username"); // nếu bạn lưu thông tin đăng nhập
+      window.location.href = "Trang_chu/login.html";
+    }
+  }
+</script>
+
+
+<!-- Header -->
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="Trang_chu.html" class="nav-link">
+        <img src="picture/logo-trang.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="Trang_chu.html" class="nav-link"><span>Trang Chủ</span></a>
+
+      <!-- Dropdown Sản Phẩm -->
+      <div class="dropdown">
+        <button class="dropdown-btn">
+          <span>Sản Phẩm</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="dropdown-menu narrow">
+          <div class="triangle triangle-center"><div></div></div>
+          <div class="dropdown-content full">
+            <a href="San_pham/xem_them_gong.html">GỌNG KÍNH</a>
+            <a href="San_pham/xem_them_trong.html">TRÒNG KÍNH</a>
+            <a href="San_pham/xem_them_kinh_ram.html">KÍNH RÂM</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tìm cửa hàng -->
+      <a href="Trang_chu/Dia_Chi.html" class="nav-link">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>Tìm Cửa Hàng</span>
+      </a>
+
+      <!-- Dropdown Xem Thêm -->
+      <div class="dropdown">
+        <button class="dropdown-btn">
+          <span>Xem Thêm</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="dropdown-menu narrow">
+          <div class="triangle triangle-center"><div></div></div>
+          <div class="dropdown-content full">
+            <a href="#gioi-thieu">VỀ CHÚNG TÔI</a>
+            <a href="Trang_chu/blog.html">BLOG</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search -->
+    <div class="search">
+      <input type="text" placeholder="Các mẫu kính râm hot nhất...">
+      <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="cart">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13m-2-5l-1 5m-4-5v5" />
+        </svg>
+        <span>Giỏ Hàng</span>
+      </button>
+    </div>
+  </div>
+</header>
+  
+
+   <!-- Banner -->
+<section class="hero-section">
+  <img 
+    src="picture/banner.png" 
+    alt="Banner Kính Mắt Optic Care" 
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+</section>
+
+ 
+<!-- BÁN CHẠY NHẤT -->
+<link rel="stylesheet" href="ban-chay-nhat.css">
+
+<section id="danh-muc" class="py-16 px-6 bg-gray-100">
+  <h2 class="text-3xl font-bold mb-10 text-center">BÁN CHẠY NHẤT</h2>
+
+  <div class="relative">
+    <!-- Nút trái -->
+    <button id="scroll-left" aria-label="Scroll Left" class="scroll-btn left-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Container cuộn ngang -->
+    <div id="best-sellers-container" class="scroll-container">
+      
+      <!-- Card 1 -->
+      <div class="best-seller-card">
+        <img src="picture/gong-kinh-nhua-1.png" alt="Gọng kính" class="card-img">
+        <div class="card-content">
+          <p class="card-title">GK.M GỌNG NHỰA NA221393 (50.18.145)</p>
+          <div class="card-footer">
+            <a href="San_pham/SP_ban_chay/na221393.html" class="buy-button">
+              880.000đ
+              <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="best-seller-card">
+        <img src="picture/gong-kinh1.png" alt="Gọng kính" class="card-img">
+        <div class="card-content">
+          <p class="card-title">GK.M GỌNG NHỰA KHOAN NA2341393 (52.22.144)</p>
+          <div class="card-footer">
+            <a href="San_pham/SP_ban_chay/na2341393.html" class="buy-button">
+              600.000đ
+              <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="best-seller-card">
+        <img src="picture/gong-kinh-nhua.png" alt="Gọng kính" class="card-img">
+        <div class="card-content">
+          <p class="card-title">GK.M GỌNG NHỰA NA301393 (44.18.145)</p>
+          <div class="card-footer">
+            <a href="San_pham/SP_ban_chay/na301393.html" class="buy-button">
+              720.000đ
+              <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="best-seller-card">
+        <img src="picture/gong-kinh3.3.png" alt="Gọng kính" class="card-img">
+        <div class="card-content">
+          <p class="card-title">GK.M GỌNG NHỰA CÀNG KIM LOẠI NA219397 (54.18.256)</p>
+          <div class="card-footer">
+            <a href="San_pham/SP_ban_chay/na219397.html" class="buy-button">
+              490.000đ
+              <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="best-seller-card">
+        <img src="picture/gong-kinh3.png" alt="Gọng kính" class="card-img">
+        <div class="card-content">
+          <p class="card-title">GK.M GỌNG NHỰA CỐT KIM LOẠI FE221393 (51.18.136)</p>
+          <div class="card-footer">
+            <a href="San_pham/SP_ban_chay/fe221393.html" class="buy-button">
+              780.000đ
+              <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="best-seller-card">
+        <img src="picture/gong-kinh4.png" alt="Gọng kính" class="card-img">
+        <div class="card-content">
+          <p class="card-title">GK.M GỌNG NHỰA CỨNG NA03006 (52.18.147)</p>
+          <div class="card-footer">
+            <a href="San_pham/SP_ban_chay/na03006.html" class="buy-button">
+              390.000đ
+              <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nút phải -->
+    <button id="scroll-right" aria-label="Scroll Right" class="scroll-btn right-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- JS cuộn -->
+<script>
+  document.getElementById('scroll-left').addEventListener('click', function () {
+    document.getElementById('best-sellers-container').scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  document.getElementById('scroll-right').addEventListener('click', function () {
+    document.getElementById('best-sellers-container').scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
+
+  <!--Video background-->
+<div class="video-background-wrapper">
+    <video id="intro-main-video" class="video-background" muted autoplay loop playsinline preload="auto">
+        <source src="picture/banner.mp4" type="video/mp4">
+    </video>
+</div> 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Hover effect -->
+  <script>
+    $(document).ready(function() {
+      $('#best-sellers-container .danh-muc-img').hover( // Cập nhật selector nếu cần, nhưng .danh-muc-img vẫn dùng được
+        function() {
+          $(this).css({
+            'transform': 'scale(1.1)',
+            'transition': 'transform 0.5s ease'
+          });
+        },
+        function() {
+          $(this).css({
+            'transform': 'scale(1)',
+            'transition': 'transform 0.5s ease'
+          });
+        }
+      );
+    });
+  </script>
+  
+<!-- Bộ siêu tập mới nhất -->
+<section id="san-pham" class="py-16 px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center text-teal-600">BỘ SƯU TẬP MỚI NHẤT</h2>
+
+    <!-- NAV DANH MỤC -->
+    <nav class="flex flex-wrap justify-center gap-6 mb-10" id="categoryNav">
+      <a href="#" data-category="gong" class="category-link text-gray-600 font-semibold hover:text-orange-500">→GỌNG KÍNH</a>
+      <a href="#" data-category="trong" class="category-link text-gray-600 font-semibold hover:text-orange-500">→TRÒNG KÍNH</a>
+      <a href="#" data-category="ram" class="category-link text-gray-600 font-semibold hover:text-orange-500">→KÍNH RÂM</a>
+    </nav>
+
+    <!-- GRID SẢN PHẨM -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6" id="productGrid">
+
+      <!-- Gọng kính1-->
+     <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+  <a href="San_pham/Gong_kinh/Gong_kinh1.html">
+    <img src="picture/gong-kinh1.png" alt="Gọng kính"
+         class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+  </a>
+  
+  <h3 class="text-sm font-semibold text-gray-800 mb-1">
+    GK.GỌNG KÍNH THỜI TRANG <br>T88577 53 (53.18.143)
+  </h3>
+  
+  <div class="flex gap-2 mb-3">
+    <div class="w-4 h-4 rounded-full bg-black border"></div>
+    <div class="w-4 h-4 rounded-full bg-green-800 border"></div>
+  </div>
+  
+  <!-- Giá căn giữa, bo tròn, có mũi tên -->
+  <div class="flex justify-center mt-4 group">
+    <a href="San_pham/Gong_kinh/Gong_kinh1.html"
+       class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+      880.000đ
+      <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+           fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+      <!-- Gọng kính2-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh2.html">
+                <img src="picture/gong-kinh2.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br>CAI 8186 (50.17.145)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-black border"></div>
+                <div class="w-4 h-4 rounded-full bg-pink-500 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh2.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    990.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+<!-- Gọng kính3-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh3.html">
+                <img src="picture/gong-kinh3.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br>3013 48 (48.18.142)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-white-600 border"></div>
+                <div class="w-4 h-4 rounded-full bg-blue-600 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh3.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    450.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Gọng kính4-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh4.html">
+                <img src="picture/gong-kinh4.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br>TP-81014 (51.19.145)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-blue-600 border"></div>
+                <div class="w-4 h-4 rounded-full bg-yellow-500 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh4.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    450.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Gọng kính5-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh5.html">
+                <img src="picture/gong-kinh9.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br> 81031 (52.19.244)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-green-600 border"></div>
+                <div class="w-4 h-4 rounded-full bg-yellow-800 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh5.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    660.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+         
+        <!-- Gọng kính6-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh6.html">
+                <img src="picture/gong-kinh8.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br> 8223 (46.19.182)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-green-600 border"></div>
+                <div class="w-4 h-4 rounded-full bg-blue-600 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh6.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    450.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+       
+        <!-- Gọng kính7-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh7.html">
+                <img src="picture/gong-kinh10.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br> 6623 (49.39.112)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-green-600 border"></div>
+                <div class="w-4 h-4 rounded-full bg-black border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh7.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    425.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+         <!-- Gọng kính8-->
+        <div class="product gong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Gong_kinh/Gong_kinh8.html">
+                <img src="picture/gong-kinh11.png" alt="Gọng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                GK.GỌNG KÍNH THỜI TRANG <br> 7754 (51.21.312)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-yellow-600 border"></div>
+                <div class="w-4 h-4 rounded-full bg-black-800 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Gong_kinh/Gong_kinh8.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    700.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Tròng kính1 -->
+        <div class="product trong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Trong_kinh/Trong_kinh1.html">
+                <img src="picture/kinh-ap-trong1.jpeg" alt="Tròng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                TK.TRÒNG KÍNH CAO CẤP
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Trong_kinh/Trong_kinh1.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    450.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tròng kính2 -->
+        <div class="product trong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Trong_kinh/Trong_kinh2.html">
+                <img src="picture/kinh-ap-trong2.jpeg" alt="Tròng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                TK.TRÒNG KÍNH CAO CẤP
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Trong_kinh/Trong_kinh2.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    550.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tròng kính3 -->
+        <div class="product trong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Trong_kinh/Trong_kinh3.html">
+                <img src="picture/kinh-ap-trong3.png" alt="Tròng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                TK.TRÒNG KÍNH CAO CẤP
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Trong_kinh/Trong_kinh3.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    310.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tròng kính4 -->
+        <div class="product trong bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Trong_kinh/Trong_kinh4.html">
+                <img src="picture/kinh-ap-trong4.png" alt="Tròng kính"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                TK.TRÒNG KÍNH CAO CẤP
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Trong_kinh/Trong_kinh4.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    359.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+          </div>
+
+      
+        
+        
+        <!-- Kính râm1 -->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram1.html">
+                <img src="picture/kinh-ram1.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>H8827 62 (62.13.146)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-black border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram1.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    650.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Kính râm2 -->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram2.html">
+                <img src="picture/kinh-ram2.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>73408 53 ( 61.14.162)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-blue-700 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram2.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    800.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Kính râm3-->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram3.html">
+                <img src="picture/kinh-ram3.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>74002 61 (61.14.150)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-green-700 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram3.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    1.050.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Kính râm4-->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram4.html">
+                <img src="picture/kinh-ram4.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>85010 53 (53.19.151)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-pink-700 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram4.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    1.050.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+   <!-- Kính râm5-->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram5.html">
+                <img src="picture/kinh-ram6.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>84045 53 (53.19.131)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-gray-500 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram5.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    990.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+   <!-- Kính râm6-->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram6.html">
+                <img src="picture/kinh-ram8.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>76052 65 (65.34.325)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-blue-500 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram6.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    2.040.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Kính râm7-->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram7.html">
+                <img src="picture/kinh-ram9.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>76059 58 (58.64.554)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-yellow-800 border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram7.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    2.190.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+<!-- Kính râm8-->
+        <div class="product ram bg-white rounded-2xl p-4 shadow-lg">
+            <a href="San_pham/Kinh_ram/Kinh_ram8.html">
+                <img src="picture/kinh-ram10.png" alt="Kính râm"
+                     class="rounded-xl w-full mb-4 cursor-pointer transition-transform duration-300 transform hover:scale-105" />
+            </a>
+            
+            <h3 class="text-sm font-semibold text-gray-800 mb-1">
+                KR.KÍNH RÂM MỚI NHẤT <br>80100 40 (40.27.244)
+            </h3>
+            
+            <div class="flex gap-2 mb-3">
+                <div class="w-4 h-4 rounded-full bg-black border"></div>
+            </div>
+            
+            <!-- Giá căn giữa, bo tròn, có mũi tên -->
+            <div class="flex justify-center mt-4 group">
+                <a href="San_pham/Kinh_ram/Kinh_ram8.html"
+                   class="flex items-center justify-center gap-2 w-52 bg-[#14b8a6] hover:bg-orange-400 text-white font-bold text-lg px-4 py-2 rounded-full transition-colors duration-300">
+                    999.000đ
+                    <svg class="w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+            </div>
+        </div>
+      </div>
+<!-- Nút xem thêm -->
+  <div class="text-center mt-10 hidden" id="loadMoreGongWrapper">
+    <a href="San_pham/xem_them_gong.html">
+  <button class="w-full max-w-7xl mx-auto border-2 border-cyan-500 bg-white hover:bg-cyan-100 text-cyan-700 font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      XEM THÊM GỌNG KÍNH +
+      </button>
+    </a>
+  </div>
+
+   <div class="text-center mt-10 hidden" id="loadMoreTrongWrapper">
+    <a href="San_pham/xem_them_trong.html">
+  <button class="w-full max-w-7xl mx-auto border-2 border-cyan-500 bg-white hover:bg-cyan-100 text-cyan-700 font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      XEM THÊM TRÒNG KÍNH +
+      </button>
+    </a>
+  </div>
+
+  <div class="text-center mt-10 hidden" id="loadMoreRamWrapper">
+    <a href="San_pham/xem_them_kinh_ram.html">
+  <button class="w-full max-w-7xl mx-auto border-2 border-cyan-500 bg-white hover:bg-cyan-100 text-cyan-700 font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      XEM THÊM KÍNH RÂM +
+      </button>
+    </a>
+  </div>
+  </section>
+
+ <!--JS Hiển thị nút thêm sản phẩm-->
+ <script>
+    $(document).ready(function () {
+      // Mặc định hiện gọng kính
+      $(".product").hide();
+      $(".product.gong").slice(0, 8).show();
+      $("#loadMoreGongWrapper").show();
+
+      $(".category-link").on("click", function (e) {
+        e.preventDefault();
+        const category = $(this).data("category"); // gong, trong, ram
+
+        // Ẩn tất cả sản phẩm và nút
+        $(".product").hide();
+        $("#loadMoreGongWrapper, #loadMoreTrongWrapper, #loadMoreRamWrapper").hide();
+
+        // Hiện sản phẩm và nút tương ứng
+        $(".product." + category).slice(0, 8).show();
+        if (category === "gong") {
+          $("#loadMoreGongWrapper").show();
+        } else if (category === "trong") {
+          $("#loadMoreTrongWrapper").show();
+        } else if (category === "ram") {
+          $("#loadMoreRamWrapper").show();
+        }
+      });
+    });
+  </script>
+
+   <!-- JS LỌC SẢN PHẨM -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".category-link");
+      const products = document.querySelectorAll(".product");
+
+      links.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Xóa màu tất cả liên kết
+          links.forEach(l => l.classList.remove("text-orange-500"));
+          this.classList.add("text-orange-500");
+
+          const category = this.getAttribute("data-category");
+
+          products.forEach(product => {
+            if (category === "all" || product.classList.contains(category)) {
+              product.style.display = "block";
+            } else {
+              product.style.display = "none";
+            }
+          });
+        });
+      });
+   document.querySelector('[data-category="gong"]').click();
+
+    });
+  </script> 
+ 
+    <!-- Giới Thiệu -->
+   <section id="gioi-thieu" class="py-16 px-6 text-center">
+     <h2 class="text-3xl font-bold mb-6 ">Về Chúng Tôi</h2>
+     <p class="text-400 max-w-2xl mx-auto">
+       Kính Mắt OPTIC CARE tự hào mang đến những sản phẩm kính chất lượng cao, đáp ứng nhu cầu thời trang và bảo vệ sức khỏe đôi mắt của bạn.
+     </p>
+
+    
+   </section>
+ 
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-column footer-left">
+                <img src="picture/logo-removebg.png" alt="Optic Care Logo" class="logo" width="150" height="auto">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button><img src="picture/mũi tên.png" alt="Gửi"></button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="picture/facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="picture/ig.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="picture/youtube.jpg" alt="YouTube"></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Sản phẩm</h4>
+                <ul>
+                    <li><a href="San_pham/xem_them_gong.html">Gọng Kính</a></li>
+                    <li><a href="San_pham/xem_them_trong.html">Tròng Kính</a></li>
+                    <li><a href="San_pham/xem_them_kinh_ram.html">Kính râm</a></li>
+                  
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Chính sách mua hàng</h4>
+                <ul>
+                    <li><a href="Trang_chu/hinh-thuc-thanh-toan.html">Hình thức thanh toán</a></li>
+                    <li><a href="Trang_chu/chinh-sach-giao-hang.html">Chính sách giao hàng</a></li>
+                     <li><a href="Trang_chu/chinh-sach-bao-hanh.html">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Thông tin liên hệ</h4>
+                <p>19000359</p>
+                <p>marketing@kinhmatopticcare.com</p>
+                <p>MST: 0108195925</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Optic Care © 2018 - 2023.</p>
+    </div>
+</footer>
+   <!-- Nút Zalo  -->
+  <a id="zaloBtn" href="https://zalo.me/g/vpdgks851" target="_blank" title="Liên hệ Zalo">
+    Zalo
+  </a>
+
+  <!-- Nút lên đầu trang -->
+  <button id="backToTopBtn" title="Lên đầu trang">
+    <i class="fas fa-home"></i>
+  </button>
+  <script>
+  // Hiện nút khi cuộn xuống
+  window.onscroll = function() {
+    document.getElementById("backToTopBtn").style.display =
+      window.pageYOffset > 100 ? "flex" : "none";
+  };
+
+  // Cuộn lên đầu trang khi click
+  document.getElementById("backToTopBtn").onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+ </body>
+ </html>
