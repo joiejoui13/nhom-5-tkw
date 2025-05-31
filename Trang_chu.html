@@ -918,7 +918,7 @@
     $(document).ready(function () {
       // Mặc định hiện gọng kính
       $(".product").hide();
-      $(".product.gong").slice(0, 4).show();
+      $(".product.gong").slice(0, 8).show();
       $("#loadMoreGongWrapper").show();
 
       $(".category-link").on("click", function (e) {
@@ -930,7 +930,7 @@
         $("#loadMoreGongWrapper, #loadMoreTrongWrapper, #loadMoreRamWrapper").hide();
 
         // Hiện sản phẩm và nút tương ứng
-        $(".product." + category).slice(0, 4).show();
+        $(".product." + category).slice(0, 8).show();
         if (category === "gong") {
           $("#loadMoreGongWrapper").show();
         } else if (category === "trong") {
