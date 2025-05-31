@@ -10,6 +10,47 @@
   position: relative;
   z-index: 10;
 }
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-icon {
+  cursor: pointer;
+}
+
+.avatar-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #19c8c2;
+}
+
+.login {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.login a {
+  color: black; /* ✅ Màu đen */
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.login a:hover {
+  background-color: #f0f0f0;
+}
 
 #logo {
   width: 300px;
