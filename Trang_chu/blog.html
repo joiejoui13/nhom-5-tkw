@@ -1,121 +1,239 @@
-
 <!DOCTYPE html>
- <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Chủ | Kính Mắt OPTIC CARE</title>
-   <link rel="icon" href="picture/kochu.png" type="image/png">
+<html lang="vi"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG | Kính Mắt OPTIC CARE</title>
+    <link rel="icon" href="picture/kochu.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
- <body class="relative min-h-screen grid-bg">
-
-<!-- Top Info Bar -->
-<div class="fixed top-0 left-0 right-0 z-30 bg-[#19c8c2] text-white text-sm py-2 px-6 flex justify-end items-center space-x-4 shadow-md">
-  <a href="chinh_sach.html" class="hover:text-purple-400 transition">Chính sách</a>
-  <a href="tra_cuu_don_hang.html" class="hover:text-purple-400 transition">Tra cứu đơn hàng</a>
-  <a href="login.html" class="flex items-center space-x-1 hover:text-purple-400 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-    </svg>
-    <span>Tài Khoản</span>
-  </a>
-</div>
-
-<!-- Header -->
-<header class="header">
-  <div class="header-container triangle-center">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="Trang_chu.html" class="nav-link">
-      <img src="picture/logo-trang.png" alt="Logo" class="logo-img"></a>
+    <link rel="stylesheet" href="Blog.css" />
+</head>
+    
+<body>
+    <!-- Top Info Bar -->
+    <div class="fixed top-0 left-0 right-0 z-30 bg-[#19c8c2] text-white text-sm py-2 px-6 flex justify-end items-center space-x-4 shadow-md">
+        <a href="chinh_sach.html" class="hover:text-purple-400 transition">Chính sách</a>
+        <a href="tra_cuu_don_hang.html" class="hover:text-purple-400 transition">Tra cứu đơn hàng</a>
+        <a href="login.html" class="flex items-center space-x-1 hover:text-purple-400 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <span>Tài Khoản</span>
+        </a>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="Trang_chu.html" class="nav-link">
-        <span>Trang Chủ</span>
-      </a>
-      <!-- Mega Dropdown Sản Phẩm -->
-      <div class="dropdown">
-  <button class="dropdown-btn">
-    <span>Sản Phẩm</span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="../Trang_chu.html" class="logo-link">
+                <div class="logo">
+                    <img src="../picture/logo-trang.png" alt="Logo" class="logo-img">
+                </div>
+            </a>
 
-  <div class="dropdown-menu narrow">
-    <div class="triangle triangle-center"></div>
-    <div class="dropdown-content full">
-      <a href="filter.html?category=gong-kinh">GỌNG KÍNH</a>
-      <a href="filter.html?category=trong-kinh">TRÒNG KÍNH</a>
-      <a href="filter.html?category=kinh-ram">KÍNH RÂM</a>
-    </div>
-  </div>
-</div>
+            <!-- Navigation -->
+            <nav class="nav">
+                 <a href="../Trang_chu.html" class="nav-link">
+                     <span>Trang chủ</span>
+                 </a>
+                <!-- Mega Dropdown Sản Phẩm -->
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        <span>Sản Phẩm</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
 
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu narrow">
+                        <div class="triangle triangle-center"></div>
+                        <div class="dropdown-content full">
+                                <a href="../San_pham/xem_them_gong.html">GỌNG KÍNH</a>
+                                <a href="../San_pham/xem_them_trong.html">TRÒNG KÍNH</a>
+                                <a href="../San_pham/xem_them_kinh_ram.html">KÍNH RÂM</a>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Tìm cửa hàng -->
-      <a href="Dia_Chi.html" class="nav-link">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <span>Tìm Cửa Hàng</span>
-      </a>
+                <!-- Tìm cửa hàng -->
+                <a href="Dia_Chi.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Tìm Cửa Hàng</span>
+                </a>
 
-      <!-- Mega Dropdown Xem Thêm -->
-      <div class="dropdown">
-        <button class="dropdown-btn">
-          <span>Xem Thêm</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
+                <!-- Mega Dropdown Xem Thêm -->
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        <span>Xem Thêm</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon rotate-on-hover" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
 
-        <div class="dropdown-menu narrow">
-          <div class="triangle triangle-center"></div>
-          <div class="dropdown-content full">
-            <a href="#">VỀ CHÚNG TÔI</a>
-            <a href="blog">BLOG</a>
-          </div>
+                    <div class="dropdown-menu narrow">
+                        <div class="triangle triangle-center"></div>
+                        <div class="dropdown-content full">
+                            <a href="#gioi-thieu">VỀ CHÚNG TÔI</a>
+                            <a href="blog.html">BLOG</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Search bar -->
+            <div class="search">
+                <input type="text" placeholder="Các mẫu kính râm hot nhất...">
+                <div class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Cart -->
+            <div class="cart">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13m-2-5l-1 5m-4-5v5" />
+                    </svg>
+                    <span>Giỏ Hàng</span>
+                </button>
+            </div>
         </div>
-      </div>
-    </nav>
-
-    <!-- Search bar -->
-    <div class="search">
-      <input type="text" placeholder="Các mẫu kính râm hot nhất...">
-      <div class="search-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.65 6.65a7.5 7.5 0 010 10.6z" />
-        </svg>
-      </div>
-    </div>
-
-    <!-- Cart -->
-    <div class="cart">
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1 5h13m-2-5l-1 5m-4-5v5" />
-        </svg>
-        <span>Giỏ Hàng</span>
-      </button>
-    </div>
-  </div>
-</header>
+    </header>
   
+<!--Banner-->
+<div class="video-background-wrapper">
+    <video id="intro-main-video" class="video-background" muted autoplay loop playsinline preload="auto">
+        <source src="../picture/banner.mp4" type="video/mp4">
+    </video>
+</div> 
+<main>
+    <div class="articles">
+      <div class="article">
+        <h2> Xu hướng kính mắt 2025</h2>
+        <img src="../picture/xuhuong.jpg" alt="Xu hướng kính">
+        <p>Khám phá các mẫu kính thời trang đang được ưa chuộng nhất năm 2025 với thiết kế hiện đại và đẳng cấp...</p>
+        <a href="#">Xem thêm →</a>
+      </div>
 
-    <!-- Banner -->
-  <section class="relative flex items-center justify-center h-screen text-center overflow-hidden">
-  <!-- Ảnh nền bên trong section -->
-  <img 
-    src="picture/banner-bg.webp" 
-    alt="Banner Kính Mắt Optic Care" 
-    class="absolute inset-0 w-full h-full object-cover z-0"
-  >
+      <div class="article">
+        <h2> Mẹo chọn kính hợp khuôn mặt</h2>
+        <img src="../picture/Hopmat.jpg" alt="Chọn kính">
+        <p>Mỗi khuôn mặt sẽ phù hợp với một kiểu kính khác nhau. Hướng dẫn giúp bạn chọn kính tôn dáng hiệu quả...</p>
+        <a href="#">Xem thêm →</a>
+      </div>
 
+      <div class="article">
+        <h2> Cách bảo vệ mắt khi dùng máy tính</h2>
+        <img src="../picture/Baove.jpg" alt="Bảo vệ mắt">
+        <p>Làm sao để đôi mắt không bị mỏi và khô khi học tập, làm việc trước màn hình? Đây là các lời khuyên hữu ích...</p>
+        <a href="#">Xem thêm →</a>
+      </div>
+    </div>
 
-</section>
+    <aside>
+      <div class="aside-article">
+        <img src="../picture/Xu_huong_2025.jpg" alt="Kính hot trend">
+        <a href="#">Kính hot trend 2025</a>
+      </div>
+
+      <div class="aside-article">
+        <img src="../picture/Kinh_mat_hop_mat.jpg" alt="Chọn kính phù hợp">
+        <a href="#">Chọn kính theo khuôn mặt</a>
+      </div>
+
+      <div class="aside-article">
+        <img src="../picture/Bao_ve_mat.webp" alt="Bảo vệ mắt">
+        <a href="#">Giữ gìn sức khỏe mắt</a>
+      </div>
+    </aside>
+  </main>
+   
+    <!-- Giới Thiệu -->
+   <section id="gioi-thieu" class="py-16 px-6 text-center">
+     <h2 class="text-3xl font-bold mb-6">Về Chúng Tôi</h2>
+     <p class="text-400 max-w-2xl mx-auto">
+       Kính Mắt OPTIC CARE tự hào mang đến những sản phẩm kính chất lượng cao, đáp ứng nhu cầu thời trang và bảo vệ sức khỏe đôi mắt của bạn.
+     </p>
+
+    
+   </section>
+ 
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-column footer-left">
+                <img src="../picture/logo-removebg.png" alt="Optic Care Logo" class="logo" width="150" height="auto">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button><img src="../picture/mũi tên.png" alt="Gửi"></button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="../picture/facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="../picture/ig.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="../picture/youtube.jpg" alt="YouTube"></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Sản phẩm</h4>
+                <ul>
+                    <li><a href="../San_pham/xem_them_gong.html">Gọng Kính</a></li>
+                    <li><a href="../San_pham/xem_them_trong.html">Tròng Kính</a></li>
+                    <li><a href="../San_pham/xem_them_kinh_ram.html">Kính râm</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Chính sách mua hàng</h4>
+                <ul>
+                    <li><a href="hinh-thuc-thanh-toan.html">Hình thức thanh toán</a></li>
+                    <li><a href="chinh-sach-giao-hang.html">Chính sách giao hàng</a></li>
+                     <li><a href="hinh-sach-bao-hanh.html">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Thông tin liên hệ</h4>
+                <p>19000359</p>
+                <p>marketing@kinhmatopticcare.com</p>
+                <p>MST: 0108195925</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Optic Care © 2018 - 2023.</p>
+    </div>
+</footer>
+   <!-- Nút Zalo với chữ -->
+  <a id="zaloBtn" href="https://zalo.me/g/vpdgks851" target="_blank" title="Liên hệ Zalo">
+    Zalo
+  </a>
+
+  <!-- Nút lên đầu trang -->
+  <button id="backToTopBtn" title="Lên đầu trang">
+    <i class="fas fa-home"></i>
+  </button>
+  <script>
+  // Hiện nút khi cuộn xuống
+  window.onscroll = function() {
+    document.getElementById("backToTopBtn").style.display =
+      window.pageYOffset > 100 ? "flex" : "none";
+  };
+
+  // Cuộn lên đầu trang khi click
+  document.getElementById("backToTopBtn").onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+ </body>
+ </html>
