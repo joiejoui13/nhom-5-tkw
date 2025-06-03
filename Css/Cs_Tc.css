@@ -269,6 +269,34 @@ section ul li {
 
 
 /* ==== FOOTER ==== */
+.image-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #f9f9f9;
+  padding: 10px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-track img {
+  width: 150px;
+  margin-right: 30px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .footer {
   background-color: rgba(240, 244, 248, 0.9);
   color: #222222;
